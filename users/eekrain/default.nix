@@ -3,8 +3,9 @@
   home-manager.users = { inherit (hmUsers) eekrain; };
 
   users.users.eekrain = {
+    name = "eekrain";
     password = "eka";
-    description = "default";
+    description = "eekrain";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];
   };

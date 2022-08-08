@@ -4,7 +4,7 @@
 
   users.users.nixos = {
     password = "nixos";
-    description = "default";
+    description = "nixos";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];
   };
