@@ -125,7 +125,7 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              base = [ core.nixos users.nixos users.root ];
+              base = [ core.nixos users.nixos users.root users.eekrain ];
             };
           };
         };
@@ -185,6 +185,7 @@
             # first steps in customizing the template.
             nixos = { suites, ... }: { imports = suites.base; };
             darwin = { suites, ... }: { imports = suites.base; };
+            eekrain = { suites, ... }: { imports = suites.base; };
           }; # digga.lib.importers.rakeLeaves ./users/hm;
         };
 
