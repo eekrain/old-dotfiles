@@ -91,7 +91,7 @@ in
       };
   };
 
-  fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts sf_pro ];
+  fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts sf-pro ];
 
   nix = {
 

@@ -1,12 +1,11 @@
-{ lib, stdenv, srcs, ... }:
-let inherit (srcs) sf_pro; in
+{ lib, stdenv, sources, ... }:
+
 stdenv.mkDerivation
 {
   pname = "sf-pro";
 
   # version will resolve to the latest available on gitub
-  inherit (sf_pro) version;
-  src = sf_pro;
+  inherit (sources.libinih) version src;
 
   installPhase = ''
     mkdir -p $out/share/fonts/{truetype,opentype}
