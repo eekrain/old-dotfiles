@@ -2,5 +2,5 @@ final: prev: {
   # keep sources this first
   sources = prev.callPackage (import ./_sources/generated.nix) { };
   # then, call packages with `final.callPackage`
-  libinih = prev.callPackage ./development/libraries/libinih { };
+  papirus-icon-theme = prev.callPackage ./papirus-icon-theme.nix { };
 }
