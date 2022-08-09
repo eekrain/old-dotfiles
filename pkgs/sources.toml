@@ -2,10 +2,6 @@
 [manix]
 src.git = "https://github.com/mlvzk/manix"
 fetch.github = "mlvzk/manix"
-# nvfetcher.toml
-[papirus-icon-theme]
-src.git = "https://github.com/PapirusDevelopmentTeam/papirus-icon-theme"
-fetch.github = "PapirusDevelopmentTeam/papirus-icon-theme"
-[libinih]
-src.github = "benhoyt/inih"
-fetch.github = "benhoyt/inih"
+[sf-pro]
+src.github = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
+fetch.github = "sahibjotsaggu/San-Francisco-Pro-Fonts"
