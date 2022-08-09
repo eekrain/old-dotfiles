@@ -2,6 +2,3 @@
 [manix]
 src.git = "https://github.com/mlvzk/manix"
 fetch.github = "mlvzk/manix"
-[sf-pro]
-src.github = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
-fetch.github = "sahibjotsaggu/San-Francisco-Pro-Fonts"

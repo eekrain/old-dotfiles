@@ -1,23 +1,4 @@
 {
-    "libinih": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "libinih",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "benhoyt",
-            "repo": "inih",
-            "rev": "r56",
-            "sha256": "sha256-7k3i3pElihastUDrdf9DyRZMe2UNFckfLUFGb4rbWLo=",
-            "type": "github"
-        },
-        "version": "r56"
-    },
     "manix": {
         "cargoLocks": null,
         "extract": null,
@@ -36,24 +17,5 @@
             "type": "github"
         },
         "version": "d08e7ca185445b929f097f8bfb1243a8ef3e10e4"
-    },
-    "papirus-icon-theme": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "papirus-icon-theme",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "PapirusDevelopmentTeam",
-            "repo": "papirus-icon-theme",
-            "rev": "f69a813fc4b597c505fc09d284925f077a5aafaa",
-            "sha256": "sha256-ZadgWcNjyuq21vEXFk0jnjNtc+UV4ZfEz38de+3PuWs=",
-            "type": "github"
-        },
-        "version": "f69a813fc4b597c505fc09d284925f077a5aafaa"
     }
 }
