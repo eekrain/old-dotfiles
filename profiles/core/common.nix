@@ -32,6 +32,7 @@ in
       skim
       tealdeer
       whois
+      libsForQt5.qt5.qtgraphicaleffects
     ];
 
     # Starship is a fast and featureful shell prompt
