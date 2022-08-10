@@ -12,17 +12,6 @@
       sha256 = "sha256-GqPuYscLhkR5E2HnSFV4R48hCWvtM3C++3zlJhiK/aw=";
     });
   };
-  picom-jonaburg-git = {
-    pname = "picom-jonaburg-git";
-    version = "e3c19cd7d1108d114552267f302548c113278d45";
-    src = fetchFromGitHub ({
-      owner = "jonaburg";
-      repo = "picom";
-      rev = "e3c19cd7d1108d114552267f302548c113278d45";
-      fetchSubmodules = false;
-      sha256 = "sha256-4voCAYd0fzJHQjJo4x3RoWz5l3JJbRvgIXn1Kg6nz6Y=";
-    });
-  };
   sf-pro = {
     pname = "sf-pro";
     version = "8bfea09aa6f1139479f80358b2e1e5c6dc991a58";
@@ -32,6 +21,17 @@
       rev = "8bfea09aa6f1139479f80358b2e1e5c6dc991a58";
       fetchSubmodules = false;
       sha256 = "sha256-mAXExj8n8gFHq19HfGy4UOJYKVGPYgarGd/04kUIqX4=";
+    });
+  };
+  x11-emoji-picker = {
+    pname = "x11-emoji-picker";
+    version = "7650a30914fc4fe0ca332d7674f9206bef408e4e";
+    src = fetchFromGitHub ({
+      owner = "GaZaTu";
+      repo = "x11-emoji-picker";
+      rev = "7650a30914fc4fe0ca332d7674f9206bef408e4e";
+      fetchSubmodules = false;
+      sha256 = "sha256-GqQvjUegQqqhVx5gujO3eDw8w5ib0hrEI7XbHS8Aa3U=";
     });
   };
 }

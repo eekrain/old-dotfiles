@@ -18,25 +18,6 @@
         },
         "version": "d08e7ca185445b929f097f8bfb1243a8ef3e10e4"
     },
-    "picom-jonaburg-git": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "picom-jonaburg-git",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "jonaburg",
-            "repo": "picom",
-            "rev": "e3c19cd7d1108d114552267f302548c113278d45",
-            "sha256": "sha256-4voCAYd0fzJHQjJo4x3RoWz5l3JJbRvgIXn1Kg6nz6Y=",
-            "type": "github"
-        },
-        "version": "e3c19cd7d1108d114552267f302548c113278d45"
-    },
     "sf-pro": {
         "cargoLocks": null,
         "extract": null,
@@ -55,5 +36,24 @@
             "type": "github"
         },
         "version": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58"
+    },
+    "x11-emoji-picker": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "x11-emoji-picker",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "GaZaTu",
+            "repo": "x11-emoji-picker",
+            "rev": "7650a30914fc4fe0ca332d7674f9206bef408e4e",
+            "sha256": "sha256-GqQvjUegQqqhVx5gujO3eDw8w5ib0hrEI7XbHS8Aa3U=",
+            "type": "github"
+        },
+        "version": "7650a30914fc4fe0ca332d7674f9206bef408e4e"
     }
 }

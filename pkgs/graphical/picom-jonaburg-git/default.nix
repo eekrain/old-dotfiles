@@ -28,10 +28,11 @@
 , xorgproto
 , xwininfo
 , withDebug ? false
+, sources
 }:
 
 stdenv.mkDerivation rec {
-  # inherit (sources.picom-jonaburg-git) pname version src;
+  inherit (sources.picom-jonaburg-git) pname version src;
 
 
   nativeBuildInputs = [
