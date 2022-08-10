@@ -4,10 +4,13 @@
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
 
+
     dbus = {
       enable = true;
       packages = [ pkgs.dconf ];
     };
+
+    my-service.picom = true;
 
     xserver = {
       enable = true;

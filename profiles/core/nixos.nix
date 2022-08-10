@@ -17,6 +17,8 @@
       iputils
       usbutils
       utillinux
+      playerctl
+      pavucontrol
     ];
 
     shellAliases =
@@ -74,12 +76,16 @@
     '';
   };
 
-  # For rage encryption, all hosts need a ssh key pair
-  services.openssh = {
-    enable = true;
-    openFirewall = lib.mkDefault false;
+  services = {
+
+    # For rage encryption, all hosts need a ssh key pair
+    openssh = {
+      enable = true;
+      openFirewall = lib.mkDefault false;
+    };
+
+    # Service that makes Out of Memory Killer more effective
+    earlyoom.enable = true;
   };
 
-  # Service that makes Out of Memory Killer more effective
-  services.earlyoom.enable = true;
 }
