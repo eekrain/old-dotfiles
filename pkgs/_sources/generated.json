@@ -1,78 +1,59 @@
 {
-  "manix": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "manix",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "mlvzk",
-      "repo": "manix",
-      "rev": "d08e7ca185445b929f097f8bfb1243a8ef3e10e4",
-      "sha256": "sha256-GqPuYscLhkR5E2HnSFV4R48hCWvtM3C++3zlJhiK/aw=",
-      "type": "github"
+    "picom-jonaburg-git": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "picom-jonaburg-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jonaburg",
+            "repo": "picom",
+            "rev": "e3c19cd7d1108d114552267f302548c113278d45",
+            "sha256": "sha256-4voCAYd0fzJHQjJo4x3RoWz5l3JJbRvgIXn1Kg6nz6Y=",
+            "type": "github"
+        },
+        "version": "e3c19cd7d1108d114552267f302548c113278d45"
     },
-    "version": "d08e7ca185445b929f097f8bfb1243a8ef3e10e4"
-  },
-  "picom-jonaburg-git": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "picom-jonaburg-git",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": true,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "ibhagwan",
-      "repo": "picom",
-      "rev": "c4107bb6cc17773fdc6c48bb2e475ef957513c7a",
-      "sha256": "sha256-1hVFBGo4Ieke2T9PqMur1w4D0bz/L3FAvfujY9Zergw=",
-      "type": "github"
+    "sf-pro": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "sf-pro",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sahibjotsaggu",
+            "repo": "San-Francisco-Pro-Fonts",
+            "rev": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58",
+            "sha256": "sha256-mAXExj8n8gFHq19HfGy4UOJYKVGPYgarGd/04kUIqX4=",
+            "type": "github"
+        },
+        "version": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58"
     },
-    "version": "c4107bb6cc17773fdc6c48bb2e475ef957513c7a"
-  },
-  "sf-pro": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "sf-pro",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "sahibjotsaggu",
-      "repo": "San-Francisco-Pro-Fonts",
-      "rev": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58",
-      "sha256": "sha256-mAXExj8n8gFHq19HfGy4UOJYKVGPYgarGd/04kUIqX4=",
-      "type": "github"
-    },
-    "version": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58"
-  },
-  "x11-emoji-picker": {
-    "cargoLocks": null,
-    "extract": null,
-    "name": "x11-emoji-picker",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "GaZaTu",
-      "repo": "x11-emoji-picker",
-      "rev": "7650a30914fc4fe0ca332d7674f9206bef408e4e",
-      "sha256": "sha256-GqQvjUegQqqhVx5gujO3eDw8w5ib0hrEI7XbHS8Aa3U=",
-      "type": "github"
-    },
-    "version": "7650a30914fc4fe0ca332d7674f9206bef408e4e"
-  }
+    "x11-emoji-picker": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "x11-emoji-picker",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "GaZaTu",
+            "repo": "x11-emoji-picker",
+            "rev": "7650a30914fc4fe0ca332d7674f9206bef408e4e",
+            "sha256": "sha256-GqQvjUegQqqhVx5gujO3eDw8w5ib0hrEI7XbHS8Aa3U=",
+            "type": "github"
+        },
+        "version": "7650a30914fc4fe0ca332d7674f9206bef408e4e"
+    }
 }
