@@ -11,7 +11,6 @@
 stdenv.mkDerivation rec {
   inherit (sources.x11-emoji-picker) pname version src;
 
-  strictDeps = true;
   buildInputs = [
     qt5.qtbase
     icu
