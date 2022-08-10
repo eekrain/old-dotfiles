@@ -22,7 +22,7 @@
       icu
       xdotool
       libsForQt5.qt5.qtgraphicaleffects
-      x11-emoji-picker
+      # x11-emoji-picker
     ];
 
     shellAliases =
@@ -92,5 +92,9 @@
     earlyoom.enable = true;
   };
 
-  qt5.enable = true;
+  qt5 = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita";
+  };
 }
