@@ -33,6 +33,7 @@ in
       skim
       tealdeer
       whois
+      python3Minimal
     ];
 
     # Starship is a fast and featureful shell prompt
