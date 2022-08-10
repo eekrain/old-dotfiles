@@ -14,13 +14,13 @@
   };
   picom-jonaburg-git = {
     pname = "picom-jonaburg-git";
-    version = "e3c19cd7d1108d114552267f302548c113278d45";
+    version = "c4107bb6cc17773fdc6c48bb2e475ef957513c7a";
     src = fetchFromGitHub ({
-      owner = "jonaburg";
+      owner = "ibhagwan";
       repo = "picom";
-      rev = "e3c19cd7d1108d114552267f302548c113278d45";
-      fetchSubmodules = false;
-      sha256 = "sha256-4voCAYd0fzJHQjJo4x3RoWz5l3JJbRvgIXn1Kg6nz6Y=";
+      rev = "c4107bb6cc17773fdc6c48bb2e475ef957513c7a";
+      fetchSubmodules = true;
+      sha256 = "sha256-1hVFBGo4Ieke2T9PqMur1w4D0bz/L3FAvfujY9Zergw=";
     });
   };
   sf-pro = {

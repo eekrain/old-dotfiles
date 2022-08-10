@@ -27,6 +27,7 @@ in
       manix
       moreutils
       nix-index
+      nixpkgs-fmt
       nmap
       ripgrep
       skim
@@ -90,7 +91,7 @@ in
       };
   };
 
-  fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts sf-pro ];
+  fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts sf-pro nerdfonts ];
 
   nix = {
 
