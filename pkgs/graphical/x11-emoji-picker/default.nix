@@ -17,9 +17,12 @@ stdenv.mkDerivation rec {
     icu
     xdotool
   ];
-  nativeBuildInputs = [ cmake extra-cmake-modules ];
+  nativeBuildInputs = [ cmake extra-cmake-modules qt5.wrapQtAppsHook ];
 
-  makeFlags = [ "PREFIX=${placeholder "out"}" ];
+  installPhase = ''
+    mkdir -p $out/bin
+    mv emoji-picker $out/bin
+  '';
 
   meta = with lib; {
     description = "X11 Emoji Picker";

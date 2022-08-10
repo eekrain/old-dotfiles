@@ -23,6 +23,7 @@
       xdotool
       libsForQt5.qt5.qtgraphicaleffects
       x11-emoji-picker
+      vscode
     ];
 
     shellAliases =
