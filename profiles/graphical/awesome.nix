@@ -10,10 +10,7 @@
       packages = [ pkgs.dconf ];
     };
 
-    foo = {
-      enable = true;
-      bar = "hello nixos modules!";
-    };
+    picom.enable = true;
 
     xserver = {
       enable = true;

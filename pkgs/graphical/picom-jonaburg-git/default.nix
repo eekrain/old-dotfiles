@@ -31,7 +31,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  inherit (sources.sf-pro) pname version src;
+  # inherit (sources.picom-jonaburg-git) pname version src;
 
 
   nativeBuildInputs = [
