@@ -3,6 +3,5 @@ final: prev: {
   sources = prev.callPackage (import ./_sources/generated.nix) { };
   # then, call packages with `final.callPackage`
   sf-pro = prev.callPackage ./fonts/sf-pro { };
-  # picom-jonaburg-git = prev.callPackage ./graphical/picom-jonaburg-git { };
-  # x11-emoji-picker = prev.callPackage ./graphical/x11-emoji-picker { };
+  x11-emoji-picker = prev.callPackage ./graphical/x11-emoji-picker { };
 }

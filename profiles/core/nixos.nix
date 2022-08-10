@@ -22,7 +22,7 @@
       icu
       xdotool
       libsForQt5.qt5.qtgraphicaleffects
-      # x11-emoji-picker
+      x11-emoji-picker
     ];
 
     shellAliases =
