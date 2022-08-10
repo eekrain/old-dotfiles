@@ -74,8 +74,6 @@
     '';
   };
 
-  users.defaultUserShell = pkgs.fish;
-
   # For rage encryption, all hosts need a ssh key pair
   services.openssh = {
     enable = true;
@@ -84,5 +82,4 @@
 
   # Service that makes Out of Memory Killer more effective
   services.earlyoom.enable = true;
-
 }

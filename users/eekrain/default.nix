@@ -1,4 +1,4 @@
-{ hmUsers, ... }:
+{ hmUsers, pkgs, ... }:
 {
   home-manager.users = { inherit (hmUsers) eekrain; };
 
@@ -8,5 +8,6 @@
     description = "eekrain";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];
+    shell = pkgs.fish;
   };
 }

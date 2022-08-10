@@ -126,7 +126,7 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              base = [ core.nixos profiles.graphical users.root users.eekrain ];
+              base = [ graphical.awesome core.nixos users.root users.eekrain ];
             };
           };
         };

@@ -1,6 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  services.xserver = {
+  services = {
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
 
