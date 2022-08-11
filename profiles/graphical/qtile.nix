@@ -21,8 +21,8 @@
         touchpad.disableWhileTyping = true;
       };
 
-      windowManager.awesome.enable = true;
-      displayManager.defaultSession = "none+awesome";
+      windowManager.qtile.enable = true;
+      displayManager.defaultSession = "none+qtile";
       desktopManager.xterm.enable = false;
       # disable automatic screen blanking and stuff, we'll do it manually instead
       serverFlagsSection = ''
