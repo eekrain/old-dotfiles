@@ -13,5 +13,5 @@
       path = "${config.xdg.dataHome}/.zsh_history";
     };
   };
-  xdg.configFile."zsh/zsh_history_backup.py".source = ./zsh_history/src/hist.py;
+  xdg.configFile."zsh/zsh_history".source = ./zsh_history;
 }
