@@ -165,7 +165,7 @@
           importables = rec {
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
-              base = [ direnv git basic-needs fish zsh ];
+              base = [ direnv git basic-needs fish zsh neofetch ];
             };
           };
           users = {

@@ -8,6 +8,6 @@
     description = "eekrain";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 }
