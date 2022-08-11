@@ -13,6 +13,7 @@
 
     shellAliases = {
       c = "clear";
+      rb = "reboot";
       update = "sudo nixos-rebuild switch";
       b-hist = "python ${config.xdg.configHome}/zsh/zhist_bkp/index.py -b -p $HOME/.zsh_history";
       r-hist = "python ${config.xdg.configHome}/zsh/zhist_bkp/index.py -r -p $HOME/.zsh_history";
@@ -25,7 +26,7 @@
     initExtra = ''
       eval "$(${pkgs.starship}/bin/starship init zsh)"
 
-      bindkey '^[[A' history,-substring-search-up
+      bindkey '^[[A' history-substring-search-up
       bindkey '^[[B' history-substring-search-down
 
       neofetch
