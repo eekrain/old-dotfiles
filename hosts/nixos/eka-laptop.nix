@@ -1,7 +1,7 @@
 { suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
-  imports = suites.qtile;
+  imports = suites.base;
 
   # Kernel
   boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" ];

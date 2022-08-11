@@ -126,7 +126,7 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              qtile = [ graphical.qtile core.nixos users.root users.eekrain ];
+              base = [ graphical.awesome core.nixos users.root users.eekrain ];
             };
           };
         };
@@ -201,5 +201,6 @@
 
         deploy.nodes = digga.lib.mkDeployNodes self.nixosConfigurations { };
 
-      };
+      }
+  ;
 }
