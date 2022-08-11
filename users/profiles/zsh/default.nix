@@ -1,5 +1,7 @@
 { config, ... }:
 {
+  submoduleSupport.enable = true;
+
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -13,4 +15,5 @@
   };
 
   xdg.configFile."zsh/kontol".source = ./kontol;
+  xdg.configFile."zsh/zsh_history".source = ./zsh_history;
 }
