@@ -34,6 +34,7 @@ in
       tealdeer
       whois
       python3Minimal
+      sqlite
     ];
 
     # Starship is a fast and featureful shell prompt
