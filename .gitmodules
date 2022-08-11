@@ -1,3 +1,0 @@
-[submodule "users/profiles/zsh/zsh_history_plugin"]
-	path = users/profiles/zsh/zsh_history_plugin
-	url = https://github.com/rchakra3/zsh_history

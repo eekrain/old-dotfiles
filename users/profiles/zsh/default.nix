@@ -11,4 +11,6 @@
       path = "${config.xdg.dataHome}/.zsh_history";
     };
   };
+
+  xdg.configFile."zsh/kontol".source = ./kontol;
 }
