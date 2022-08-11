@@ -4,7 +4,7 @@ let
   inherit (pkgs)
     agenix
     cachix
-    editorconfig-checker
+    # editorconfig-checker
     mdbook
     nixUnstable
     nixpkgs-fmt
@@ -52,7 +52,7 @@ in
     }
 
     (linter nixpkgs-fmt)
-    (linter editorconfig-checker)
+    # (linter editorconfig-checker)
 
     (docs mdbook)
   ]
