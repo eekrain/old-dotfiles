@@ -36,6 +36,7 @@ in
       whois
       python3Full
       sqlite
+      wezterm
     ];
 
     # Starship is a fast and featureful shell prompt
