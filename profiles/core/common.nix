@@ -16,6 +16,7 @@ in
       # TODO: must come from unstable channel
       # alejandra
       binutils
+      btop
       coreutils
       curl
       direnv
@@ -33,7 +34,7 @@ in
       skim
       tealdeer
       whois
-      python3Minimal
+      python3Full
       sqlite
     ];
 
