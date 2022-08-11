@@ -21,10 +21,14 @@ in
       curl
       direnv
       dnsutils
+      exa
       fd
+      fnm
+      fzf
       git
       bottom
       jq
+      lua
       manix
       moreutils
       nix-index

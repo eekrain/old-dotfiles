@@ -1,11 +1,16 @@
 { config, pkgs, ... }:
 {
-  submoduleSupport.enable = true;
+  home.packages = with pkgs; [ pfetch ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
   programs.zsh = {
     enable = true;
+
+    history = {
+      size = 10000;
+      save = 10000;
+    };
 
     shellAliases = {
       update = "sudo nixos-rebuild switch";
@@ -19,12 +24,26 @@
 
     initExtra = ''
       eval "$(${pkgs.starship}/bin/starship init zsh)"
-      eval "$(${pkgs.direnv}/bin/direnv hook fish)"
+
+      pfetch
     '';
 
-    history = {
-      size = 10000;
-      save = 10000;
+    zplug = {
+      enable = true;
+      plugins = [
+        # { name = "zsh-users/zsh-history-substring-search"; }
+        # { name = "davidde/git"; tags = [ ''hook-load:"unalias gco gbd"'' ]; }
+        # { name = "grimmbraten/gitgo"; }
+        # { name = "TwoPizza9621536/zsh-exa"; }
+        # { name = "aubreypwd/zsh-plugin-fd"; }
+        # { name = "skywind3000/z.lua"; }
+        # { name = "dominik-schwabe/zsh-fnm"; }
+        # { name = "eekrain/zsh-aws"; }
+        # { name = "marlonrichert/zsh-autocomplete"; }
+        # { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; }
+        # { name = "z-shell/F-Sy-H"; tags = [ defer:3 ]; }
+      ];
     };
+
   };
 }
