@@ -2,7 +2,7 @@
 {
   submoduleSupport.enable = true;
 
-  xdg.configFile."zsh/zhist_bkp.py".source = ./zhist_bkp/index.py;
+  # xdg.configFile."zsh/zhist_bkp.py".source = ./zhist_bkp/index.py;
 
   programs.zsh = {
     enable = true;
