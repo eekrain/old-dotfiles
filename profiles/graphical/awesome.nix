@@ -14,6 +14,7 @@
       maim
       mpc-cli
       mpv
+      mpd
       mpdris2
       python3Full
       python39Packages.mutagen
