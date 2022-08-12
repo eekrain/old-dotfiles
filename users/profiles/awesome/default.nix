@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  xdg.dataFile."fonts".source = ./fonts;
-
-  home.packages = with pkgs; [ vscode ];
+  xdg.dataFile."fonts".recursive = ./fonts;
+  xdg.configfile."awesome".recursive = ./awesome;
 }

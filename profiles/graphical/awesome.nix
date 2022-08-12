@@ -5,7 +5,7 @@
       rofi
       lxappearance
       inotify-tools
-      polkit-gnome
+      polkit_gnome
       xclip
       gpick
       ffmpeg
@@ -21,6 +21,8 @@
       playerctl
     ];
   };
+
+  location.provider = "geoclue2";
 
   services = {
     gnome.gnome-keyring.enable = true;
