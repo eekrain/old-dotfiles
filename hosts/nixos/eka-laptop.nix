@@ -6,8 +6,8 @@
   # Kernel
   boot = {
     initrd = {
-      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" ];
-      kernelModules = [ ];
+      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" "xhci_pci" "ahci" "usb_storage" ];
+      kernelModules = [ "kvm-intel" ];
     };
     kernelModules = [ ];
     extraModulePackages = [ ];
@@ -20,40 +20,37 @@
     useOSProber = true;
   };
 
-  # Required, but will be overridden in the resulting installer ISO.
+  # File systems.
   fileSystems."/" =
     {
-      device = "/dev/disk/by-uuid/3543649e-326d-452d-8656-374b408c2d9a";
+      device = "/dev/disk/by-uuid/74c9ef46-ccaa-4096-9ccb-670b9849b21b";
       fsType = "ext4";
+    };
+
+  fileSystems."/boot/efi" =
+    {
+      device = "/dev/disk/by-uuid/E636-EFDE";
+      fsType = "vfat";
     };
 
   swapDevices = [ ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  # Networking
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp0s3.useDHCP = lib.mkDefault true;
   networking.networkmanager.enable = true;
 
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  # Disable this when fresh install on bare metal
-  virtualisation.virtualbox.guest.enable = true;
-
-  hardware.bluetooth.enable = true;
-  services = {
-    blueman.enable = true;
-
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-    };
+  # Enable sound with pipewire.
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
 
     mpd = {
       enable = true;
@@ -66,24 +63,30 @@
       user = "eekrain";
     };
   };
+  # Bluetooth audio settings for pipewire
+  environment.etc = {
+    "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
+      bluez_monitor.properties = {
+        ["bluez5.enable-sbc-xq"] = true,
+        ["bluez5.enable-msbc"] = true,
+        ["bluez5.enable-hw-volume"] = true,
+        ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+      }
+    '';
+  };
+
+  # Hardware Spesific
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+  systemd.services.upower.enable = true;
 
   systemd.services.mpd.environment = {
     # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/609
     XDG_RUNTIME_DIR = "/run/user/1000"; # User-id 1000 must match above user. MPD will look inside this directory for the PipeWire socket.
   };
-  systemd.services.upower.enable = true;
 
-
-  # Bluetooth audio settings for pipewire
-  environment.etc = {
-    "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
-      		bluez_monitor.properties = {
-      			["bluez5.enable-sbc-xq"] = true,
-      			["bluez5.enable-msbc"] = true,
-      			["bluez5.enable-hw-volume"] = true,
-      			["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
-      		}
-      	'';
-  };
-
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
 }
