@@ -132,15 +132,8 @@
 
   # File systems.
   fileSystems."/" =
-    {
-      device = "/dev/disk/by-uuid/74c9ef46-ccaa-4096-9ccb-670b9849b21b";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
-    };
-
-  fileSystems."/boot/efi" =
-    {
-      device = "/dev/disk/by-uuid/E636-EFDE";
-      fsType = "vfat";
     };
 
   swapDevices = [ ];
@@ -154,13 +147,15 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+  services = {
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+    };
 
     mpd = {
       enable = true;
