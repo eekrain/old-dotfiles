@@ -1,5 +1,5 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   xdg.dataFile."fonts".source = ./fonts;
-  xdg.configfile."awesome".source = ./awesome;
+  xdg.configfile."awesome".source = ./config;
 }
