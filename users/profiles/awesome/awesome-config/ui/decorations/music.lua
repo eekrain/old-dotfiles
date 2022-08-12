@@ -219,35 +219,35 @@ end
 
 --- PLayerctl
 --- ~~~~~~~~~
-playerctl_daemon:connect_signal("metadata", function(_, title, artist, album_path, album, ___, player_name)
-	if player_name == "mpd" then
-		if title == "" then
-			title = "Nothing Playing"
-		end
-		if artist == "" then
-			artist = "Nothing Playing"
-		end
-		if album_path == "" then
-			album_path = beautiful.music
-		end
+-- playerctl_daemon:connect_signal("metadata", function(_, title, artist, album_path, album, ___, player_name)
+-- 	if player_name == "mpd" then
+-- 		if title == "" then
+-- 			title = "Nothing Playing"
+-- 		end
+-- 		if artist == "" then
+-- 			artist = "Nothing Playing"
+-- 		end
+-- 		if album_path == "" then
+-- 			album_path = beautiful.music
+-- 		end
 
-		music_art:set_image(gears.surface.load_uncached(album_path))
-		title_now:set_markup_silently(helpers.ui.colorize_text(string.upper(title), beautiful.accent))
-		artist_now:set_markup_silently(artist)
-	end
-end)
+-- 		music_art:set_image(gears.surface.load_uncached(album_path))
+-- 		title_now:set_markup_silently(helpers.ui.colorize_text(string.upper(title), beautiful.accent))
+-- 		artist_now:set_markup_silently(artist)
+-- 	end
+-- end)
 
-playerctl_daemon:connect_signal("position", function(_, interval_sec, length_sec, player_name)
-	if player_name == "mpd" then
-		local pos_now = tostring(os.date("!%M:%S", math.floor(interval_sec)))
-		local pos_length = tostring(os.date("!%M:%S", math.floor(length_sec)))
-		local pos_markup = pos_now .. helpers.ui.colorize_text(" / " .. pos_length, beautiful.color8)
+-- playerctl_daemon:connect_signal("position", function(_, interval_sec, length_sec, player_name)
+-- 	if player_name == "mpd" then
+-- 		local pos_now = tostring(os.date("!%M:%S", math.floor(interval_sec)))
+-- 		local pos_length = tostring(os.date("!%M:%S", math.floor(length_sec)))
+-- 		local pos_markup = pos_now .. helpers.ui.colorize_text(" / " .. pos_length, beautiful.color8)
 
-		music_pos:set_markup_silently(pos_markup)
-		music_bar.value = (interval_sec / length_sec) * 100
-		music_length = length_sec
-	end
-end)
+-- 		music_pos:set_markup_silently(pos_markup)
+-- 		music_bar.value = (interval_sec / length_sec) * 100
+-- 		music_length = length_sec
+-- 	end
+-- end)
 
 local music_create_decoration = function(c)
 	--- Hide default titlebar
