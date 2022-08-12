@@ -65,4 +65,6 @@
   security = {
     polkit.enable = true;
   };
+
+  programs.nm-applet.enable = true;
 }
