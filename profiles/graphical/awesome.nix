@@ -1,8 +1,33 @@
 { pkgs, ... }:
 {
+  environment = {
+    systemPackages = with pkgs; [
+      rofi
+      lxappearance
+      inotify-tools
+      polkit-gnome
+      xclip
+      gpick
+      ffmpeg
+      brightnessctl
+      feh
+      maim
+      mpc-cli
+      mpv
+      mpdris2
+      python3Full
+      python39Packages.mutagen
+      ncmpcpp
+      playerctl
+    ];
+  };
+
   services = {
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
+    acpid.enable = true;
+    redshift.enable = true;
+    mpd.enable = true;
 
 
     dbus = {
@@ -32,5 +57,9 @@
         Option "OffTime" "0"
       '';
     };
+  };
+
+  security = {
+    polkit.enable = true;
   };
 }

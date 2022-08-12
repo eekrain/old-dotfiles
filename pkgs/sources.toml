@@ -9,3 +9,6 @@ fetch.github = "GaZaTu/x11-emoji-picker"
 src.git = "https://github.com/jonaburg/picom"
 fetch.github = "jonaburg/picom"
 git.fetchSubmodules = true
+[yoru-fonts]
+src.git = "https://github.com/rxyhn/yoru"
+fetch.github = "rxyhn/yoru"

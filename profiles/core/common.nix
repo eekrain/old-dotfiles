@@ -38,7 +38,6 @@ in
       skim
       tealdeer
       whois
-      python3Full
       sqlite
       wezterm
     ];
@@ -99,6 +98,7 @@ in
       };
   };
 
+  fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts sf-pro nerdfonts ];
 
   nix = {

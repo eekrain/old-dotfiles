@@ -4,15 +4,21 @@
   imports = suites.base;
 
   # Kernel
-  boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd = {
+      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ ];
+    extraModulePackages = [ ];
+  };
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sda";
+    useOSProber = true;
+  };
 
   # Required, but will be overridden in the resulting installer ISO.
   fileSystems."/" =
@@ -33,11 +39,36 @@
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  # Disable this on fresh install on bare metal
+  # Disable this when fresh install on bare metal
   virtualisation.virtualbox.guest.enable = true;
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
   systemd.services.upower.enable = true;
+  services = {
+    blueman.enable = true;
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+    };
+
+    mpd.enable = true;
+  };
+
+  # Bluetooth audio settings for pipewire
+  environment.etc = {
+    "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
+      		bluez_monitor.properties = {
+      			["bluez5.enable-sbc-xq"] = true,
+      			["bluez5.enable-msbc"] = true,
+      			["bluez5.enable-hw-volume"] = true,
+      			["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+      		}
+      	'';
+  };
+
 }
