@@ -12,6 +12,17 @@
       sha256 = "sha256-SxydaQScu0kvBn3VOnT29/Sji0Y+7my+tO46mpMggAQ=";
     });
   };
+  picom-git = {
+    pname = "picom-git";
+    version = "896acabab11e977a5a07e2a59d9b35bfeb167263";
+    src = fetchFromGitHub ({
+      owner = "yshui";
+      repo = "picom";
+      rev = "896acabab11e977a5a07e2a59d9b35bfeb167263";
+      fetchSubmodules = true;
+      sha256 = "sha256-QaEuewhAbaBW+rYt0eFwV1hD466ydI6ihGWasFICurI=";
+    });
+  };
   picom-jonaburg-git = {
     pname = "picom-jonaburg-git";
     version = "e3c19cd7d1108d114552267f302548c113278d45";

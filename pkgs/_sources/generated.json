@@ -18,6 +18,25 @@
         },
         "version": "b7bac1dc761f7e231355e76351500a97b27b6803"
     },
+    "picom-git": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "picom-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yshui",
+            "repo": "picom",
+            "rev": "896acabab11e977a5a07e2a59d9b35bfeb167263",
+            "sha256": "sha256-QaEuewhAbaBW+rYt0eFwV1hD466ydI6ihGWasFICurI=",
+            "type": "github"
+        },
+        "version": "896acabab11e977a5a07e2a59d9b35bfeb167263"
+    },
     "picom-jonaburg-git": {
         "cargoLocks": null,
         "extract": null,

@@ -5,6 +5,10 @@ fetch.github = "sahibjotsaggu/San-Francisco-Pro-Fonts"
 [x11-emoji-picker]
 src.git = "https://github.com/GaZaTu/x11-emoji-picker"
 fetch.github = "GaZaTu/x11-emoji-picker"
+[picom-git]
+src.git = "https://github.com/yshui/picom"
+fetch.github = "yshui/picom"
+git.fetchSubmodules = true
 [picom-jonaburg-git]
 src.git = "https://github.com/jonaburg/picom"
 fetch.github = "jonaburg/picom"
