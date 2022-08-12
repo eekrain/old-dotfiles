@@ -1,5 +1,5 @@
 { pkgs, ... }:
 {
-  xdg.dataFile."fonts".recursive = ./fonts;
-  xdg.configfile."awesome".recursive = ./awesome;
+  xdg.dataFile."fonts".source = ./fonts;
+  xdg.configfile."awesome".source = ./awesome;
 }
