@@ -13,6 +13,7 @@
     extraModulePackages = [ ];
   };
 
+
   # Bootloader.
   boot.loader = {
     efi = {
@@ -31,51 +32,6 @@
 
 
       extraEntries = ''
-        menuentry "NixOS - Default" --class nixos --unrestricted {
-        search --set=drive1 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-        search --set=drive2 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-          linux ($drive2)/nix/store/2ybv1pydzh7jylm5lfdjc20m4yprkmw4-linux-5.15.56/bzImage init=/nix/store/w0cdc8zwgn1ymalrn3nka41kf2051ha0-nixos-system-nixos-22.05.2019.d9536b9b1e3/init loglevel=4
-          initrd ($drive2)/nix/store/sdq5ysh3kpzyj3cprxbzfwpzwxlcr109-initrd-linux-5.15.56/initrd
-        }
-
-
-        submenu "NixOS - All configurations" --class submenu {
-        menuentry "NixOS - Configuration 5 (2022-08-13 - 22.05.2019.d9536b9b1e3)" --class nixos {
-        search --set=drive1 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-        search --set=drive2 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-          linux ($drive2)/nix/store/2ybv1pydzh7jylm5lfdjc20m4yprkmw4-linux-5.15.56/bzImage init=/nix/store/w0cdc8zwgn1ymalrn3nka41kf2051ha0-nixos-system-nixos-22.05.2019.d9536b9b1e3/init loglevel=4
-          initrd ($drive2)/nix/store/sdq5ysh3kpzyj3cprxbzfwpzwxlcr109-initrd-linux-5.15.56/initrd
-        }
-
-        menuentry "NixOS - Configuration 4 (2022-08-12 - 22.05.2019.d9536b9b1e3)" --class nixos {
-        search --set=drive1 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-        search --set=drive2 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-          linux ($drive2)/nix/store/2ybv1pydzh7jylm5lfdjc20m4yprkmw4-linux-5.15.56/bzImage init=/nix/store/4qizd9fym1pa8949vbr3hgwwplsbl5qn-nixos-system-nixos-22.05.2019.d9536b9b1e3/init loglevel=4
-          initrd ($drive2)/nix/store/sdq5ysh3kpzyj3cprxbzfwpzwxlcr109-initrd-linux-5.15.56/initrd
-        }
-
-        menuentry "NixOS - Configuration 3 (2022-08-12 - 22.05.2019.d9536b9b1e3)" --class nixos {
-        search --set=drive1 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-        search --set=drive2 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-          linux ($drive2)/nix/store/2ybv1pydzh7jylm5lfdjc20m4yprkmw4-linux-5.15.56/bzImage init=/nix/store/amnnfvl2ndpb55n87w4m3ld1fnkyfmi8-nixos-system-nixos-22.05.2019.d9536b9b1e3/init loglevel=4
-          initrd ($drive2)/nix/store/sdq5ysh3kpzyj3cprxbzfwpzwxlcr109-initrd-linux-5.15.56/initrd
-        }
-
-        menuentry "NixOS - Configuration 2 (2022-08-12 - 22.05.2019.d9536b9b1e3)" --class nixos {
-        search --set=drive1 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-        search --set=drive2 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-          linux ($drive2)/nix/store/2ybv1pydzh7jylm5lfdjc20m4yprkmw4-linux-5.15.56/bzImage init=/nix/store/3xvl32a3i1irm8fsz958lclb7q22h5h2-nixos-system-nixos-22.05.2019.d9536b9b1e3/init loglevel=4
-          initrd ($drive2)/nix/store/sdq5ysh3kpzyj3cprxbzfwpzwxlcr109-initrd-linux-5.15.56/initrd
-        }
-
-        menuentry "NixOS - Configuration 1 (2022-08-12 - 22.05.2019.d9536b9b1e3)" --class nixos {
-        search --set=drive1 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-        search --set=drive2 --fs-uuid 74c9ef46-ccaa-4096-9ccb-670b9849b21b
-          linux ($drive2)/nix/store/2ybv1pydzh7jylm5lfdjc20m4yprkmw4-linux-5.15.56/bzImage init=/nix/store/wcw2l3qsrh87z550cnzcpwwiqkszjbm7-nixos-system-nixos-22.05.2019.d9536b9b1e3/init loglevel=4
-          initrd ($drive2)/nix/store/sdq5ysh3kpzyj3cprxbzfwpzwxlcr109-initrd-linux-5.15.56/initrd
-        }
-
-        }
         menuentry 'Arch Linux (on /dev/sdb2)' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
           insmod part_gpt
           insmod fat
@@ -130,13 +86,15 @@
     };
   };
 
-  # File systems.
   fileSystems."/" =
-    { device = "/dev/disk/by-label/nixos";
+    { device = "/dev/disk/by-uuid/9bd662e7-2d16-4416-a01c-f6cc510cf1b2";
       fsType = "ext4";
     };
 
-  swapDevices = [ ];
+  fileSystems."/boot/efi" =
+    { device = "/dev/disk/by-uuid/E636-EFDE";
+      fsType = "vfat";
+    };
 
   # Networking
   networking.useDHCP = lib.mkDefault true;
