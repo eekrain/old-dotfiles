@@ -25,13 +25,12 @@
       enable = true;
       version = 2;
       efiSupport = true;
+      devices = [ "nodev" ];
 
-      # Enable this 
+      # Enable this only on fresh install
       useOSProber = true;
 
-      # Disable this on fresh install
-      # devices = [ "nodev" ];
-
+      # After fresh install with using os prober, copy the extra entry from the output
       # extraEntries = ''
       #   menuentry 'Arch Linux (on /dev/sdb2)' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
       #     insmod part_gpt
