@@ -24,77 +24,84 @@
     grub = {
       enable = true;
       version = 2;
-      device = "nodev";
       efiSupport = true;
-      devices = [ "nodev" ];
 
-      useOSProber = false;
+      # Enable this 
+      useOSProber = true;
 
+      # Disable this on fresh install
+      # devices = [ "nodev" ];
 
-      extraEntries = ''
-        menuentry 'Arch Linux (on /dev/sdb2)' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-          insmod part_gpt
-          insmod fat
-          set root='hd1,gpt1'
-          if [ x$feature_platform_search_hint = xy ]; then
-            search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-          else
-            search --no-floppy --fs-uuid --set=root E636-EFDE
-          fi
-          linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-          initrd /intel-ucode.img
-        }
-        submenu 'Advanced options for Arch Linux (on /dev/sdb2)' $menuentry_id_option 'osprober-gnulinux-advanced-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-          menuentry 'Arch Linux (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-            insmod part_gpt
-            insmod fat
-            set root='hd1,gpt1'
-            if [ x$feature_platform_search_hint = xy ]; then
-              search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-            else
-              search --no-floppy --fs-uuid --set=root E636-EFDE
-            fi
-            linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-            initrd /intel-ucode.img
-          }
-          menuentry 'Arch Linux, with Linux linux-zen (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-            insmod part_gpt
-            insmod fat
-            set root='hd1,gpt1'
-            if [ x$feature_platform_search_hint = xy ]; then
-              search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-            else
-              search --no-floppy --fs-uuid --set=root E636-EFDE
-            fi
-            linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-            initrd /intel-ucode.img
-          }
-          menuentry 'Arch Linux, with Linux linux-zen (fallback initramfs) (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-            insmod part_gpt
-            insmod fat
-            set root='hd1,gpt1'
-            if [ x$feature_platform_search_hint = xy ]; then
-              search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-            else
-              search --no-floppy --fs-uuid --set=root E636-EFDE
-            fi
-            linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-            initrd /intel-ucode.img
-          }
-        }
-      '';
+      # extraEntries = ''
+      #   menuentry 'Arch Linux (on /dev/sdb2)' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
+      #     insmod part_gpt
+      #     insmod fat
+      #     set root='hd1,gpt1'
+      #     if [ x$feature_platform_search_hint = xy ]; then
+      #       search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
+      #     else
+      #       search --no-floppy --fs-uuid --set=root E636-EFDE
+      #     fi
+      #     linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
+      #     initrd /intel-ucode.img
+      #   }
+      #   submenu 'Advanced options for Arch Linux (on /dev/sdb2)' $menuentry_id_option 'osprober-gnulinux-advanced-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
+      #     menuentry 'Arch Linux (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
+      #       insmod part_gpt
+      #       insmod fat
+      #       set root='hd1,gpt1'
+      #       if [ x$feature_platform_search_hint = xy ]; then
+      #         search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
+      #       else
+      #         search --no-floppy --fs-uuid --set=root E636-EFDE
+      #       fi
+      #       linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
+      #       initrd /intel-ucode.img
+      #     }
+      #     menuentry 'Arch Linux, with Linux linux-zen (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
+      #       insmod part_gpt
+      #       insmod fat
+      #       set root='hd1,gpt1'
+      #       if [ x$feature_platform_search_hint = xy ]; then
+      #         search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
+      #       else
+      #         search --no-floppy --fs-uuid --set=root E636-EFDE
+      #       fi
+      #       linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
+      #       initrd /intel-ucode.img
+      #     }
+      #     menuentry 'Arch Linux, with Linux linux-zen (fallback initramfs) (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
+      #       insmod part_gpt
+      #       insmod fat
+      #       set root='hd1,gpt1'
+      #       if [ x$feature_platform_search_hint = xy ]; then
+      #         search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
+      #       else
+      #         search --no-floppy --fs-uuid --set=root E636-EFDE
+      #       fi
+      #       linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
+      #       initrd /intel-ucode.img
+      #     }
+      #   }
+      # '';
     };
   };
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/9bd662e7-2d16-4416-a01c-f6cc510cf1b2";
+    {
+      device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/E636-EFDE";
+    {
+      device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
     };
+
+  swapDevices =
+    [{ device = "/dev/disk/by-label/swap"; }];
+
 
   # Networking
   networking.useDHCP = lib.mkDefault true;
