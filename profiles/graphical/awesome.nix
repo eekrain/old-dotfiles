@@ -23,7 +23,9 @@
     ];
   };
 
-  location.provider = "geoclue2";
+  location.provider = "manual";
+  location.latitude = -7.8;
+  location.longitude = 110.3;
 
   services = {
     gnome.gnome-keyring.enable = true;

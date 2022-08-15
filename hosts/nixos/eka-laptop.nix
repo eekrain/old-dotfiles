@@ -7,9 +7,10 @@
   boot = {
     initrd = {
       availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" "xhci_pci" "ahci" "usb_storage" ];
-      kernelModules = [ "kvm-intel" ];
+      kernelModules = [ "dm-snapshot" ];
+      root.device = "/dev/disk/by-uuid/fa088126-27e2-41fa-ab8f-90748b34ea89";
     };
-    kernelModules = [ ];
+    kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
   };
 
@@ -26,76 +27,35 @@
       version = 2;
       efiSupport = true;
       devices = [ "nodev" ];
-
-      # Enable this only on fresh install
       useOSProber = true;
-
-      # After fresh install with using os prober, copy the extra entry from the output
-      # extraEntries = ''
-      #   menuentry 'Arch Linux (on /dev/sdb2)' --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-      #     insmod part_gpt
-      #     insmod fat
-      #     set root='hd1,gpt1'
-      #     if [ x$feature_platform_search_hint = xy ]; then
-      #       search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-      #     else
-      #       search --no-floppy --fs-uuid --set=root E636-EFDE
-      #     fi
-      #     linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-      #     initrd /intel-ucode.img
-      #   }
-      #   submenu 'Advanced options for Arch Linux (on /dev/sdb2)' $menuentry_id_option 'osprober-gnulinux-advanced-a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-      #     menuentry 'Arch Linux (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-      #       insmod part_gpt
-      #       insmod fat
-      #       set root='hd1,gpt1'
-      #       if [ x$feature_platform_search_hint = xy ]; then
-      #         search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-      #       else
-      #         search --no-floppy --fs-uuid --set=root E636-EFDE
-      #       fi
-      #       linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-      #       initrd /intel-ucode.img
-      #     }
-      #     menuentry 'Arch Linux, with Linux linux-zen (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-      #       insmod part_gpt
-      #       insmod fat
-      #       set root='hd1,gpt1'
-      #       if [ x$feature_platform_search_hint = xy ]; then
-      #         search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-      #       else
-      #         search --no-floppy --fs-uuid --set=root E636-EFDE
-      #       fi
-      #       linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-      #       initrd /intel-ucode.img
-      #     }
-      #     menuentry 'Arch Linux, with Linux linux-zen (fallback initramfs) (on /dev/sdb2)' --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-/vmlinuz-linux-zen--a737cad4-85d7-49af-bd66-72d8bcd986e6' {
-      #       insmod part_gpt
-      #       insmod fat
-      #       set root='hd1,gpt1'
-      #       if [ x$feature_platform_search_hint = xy ]; then
-      #         search --no-floppy --fs-uuid --set=root --hint-bios=hd1,gpt1 --hint-efi=hd1,gpt1 --hint-baremetal=ahci1,gpt1  E636-EFDE
-      #       else
-      #         search --no-floppy --fs-uuid --set=root E636-EFDE
-      #       fi
-      #       linux /vmlinuz-linux-zen root=UUID=a737cad4-85d7-49af-bd66-72d8bcd986e6 rw rootfstype=ext4 loglevel=3 quiet
-      #       initrd /intel-ucode.img
-      #     }
-      #   }
-      # '';
     };
   };
 
+
   fileSystems."/" =
     {
-      device = "/dev/disk/by-label/nixos";
+      device = "/dev/disk/by-label/root";
       fsType = "ext4";
     };
 
-  fileSystems."/boot/efi" =
+  fileSystems."/boot" =
     {
       device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
+    };
+
+  fileSystems."/nix" =
+    {
+      device = "/dev/disk/by-label/nix-store";
+      fsType = "ext4";
+      neededForBoot = true;
+      options = [ "noatime" ];
+    };
+
+  fileSystems."/home" =
+    {
+      device = "/dev/disk/by-label/home";
+      fsType = "ext4";
     };
 
   swapDevices =
