@@ -8,7 +8,9 @@
     initrd = {
       availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" "xhci_pci" "ahci" "usb_storage" ];
       kernelModules = [ "dm-snapshot" ];
-      root.device = "/dev/disk/by-uuid/fa088126-27e2-41fa-ab8f-90748b34ea89";
+      luks.devices = {
+        root.device = "/dev/disk/by-uuid/fa088126-27e2-41fa-ab8f-90748b34ea89";
+      };
     };
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];

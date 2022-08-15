@@ -15,6 +15,7 @@ channels: final: prev: {
     starship
     deploy-rs
     brave
+    wezterm
     ;
 
   haskellPackages = prev.haskellPackages.override
