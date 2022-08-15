@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  home.packages = with pkgs; [ awscli2 ];
+
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
   programs.zsh = {

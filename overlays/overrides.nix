@@ -5,7 +5,6 @@ channels: final: prev: {
   inherit (channels.latest)
     cachix
     dhall
-    discord
     element-desktop
     rage
     nix-index
@@ -16,6 +15,8 @@ channels: final: prev: {
     deploy-rs
     brave
     wezterm
+    discord
+    vscode
     ;
 
   haskellPackages = prev.haskellPackages.override
