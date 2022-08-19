@@ -16,7 +16,7 @@ channels: final: prev: {
     brave
     wezterm
     discord
-    vscode
+    neovim
     ;
 
   haskellPackages = prev.haskellPackages.override

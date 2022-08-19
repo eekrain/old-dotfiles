@@ -1,7 +1,10 @@
-{ suites, config, lib, pkgs, modulesPath, ... }:
+{ self, suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
   imports = suites.base;
+
+  # Secrets Config
+  age.secrets.master_passwd.file = "${self}/secrets/master_passwd.age";
 
   # Kernel
   boot = {

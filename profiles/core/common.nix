@@ -15,6 +15,7 @@ in
     systemPackages = with pkgs; [
       # TODO: must come from unstable channel
       # alejandra
+      bat
       binutils
       btop
       coreutils

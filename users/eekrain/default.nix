@@ -4,7 +4,8 @@
 
   users.users.eekrain = {
     name = "eekrain";
-    password = "eka";
+    passwordFile = "/run/agenix/master_passwd";
+    # password = "eka";
     description = "eekrain";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];
