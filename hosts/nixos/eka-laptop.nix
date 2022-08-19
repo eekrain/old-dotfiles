@@ -9,6 +9,8 @@
     group = "wheel";
     mode = "0440";
   };
+  users.users.eekrain.passwordFile = config.age.secrets.mysecret.path;
+  users.users.root.passwordFile = config.age.secrets.mysecret.path;
 
   # Kernel
   boot = {
