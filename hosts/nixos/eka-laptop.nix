@@ -3,15 +3,6 @@
   ### root password is empty by default ###
   imports = suites.base;
 
-  # Secrets Config
-  age.secrets.mysecret = {
-    file = "${self}/secrets/secret.age";
-    group = "wheel";
-    mode = "0440";
-  };
-  users.users.eekrain.passwordFile = config.age.secrets.mysecret.path;
-  users.users.root.passwordFile = config.age.secrets.mysecret.path;
-
   # Kernel
   boot = {
     initrd = {
@@ -69,8 +60,14 @@
       fsType = "ext4";
     };
 
+  fileSystems."/etc/ssh" = {
+    depends = [ "/persist" ];
+    neededForBoot = true;
+  };
+
   swapDevices =
     [{ device = "/dev/disk/by-label/swap"; }];
+
 
 
   # Networking
@@ -129,4 +126,16 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+
+  # Secrets Config
+  age.secrets.mysecret = {
+    file = "${self}/secrets/secret.age";
+    group = "wheel";
+    mode = "0440";
+  };
+  # users.users.eekrain.passwordFile = "/run/agenix/mysecret";
+  # users.users.root.passwordFile = "/run/agenix/mysecret";
+  users.users.eekrain.passwordFile = config.age.secrets.mysecret.path;
+  users.users.root.passwordFile = config.age.secrets.mysecret.path;
 }
