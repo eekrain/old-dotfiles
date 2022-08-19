@@ -1,12 +1,10 @@
-{ self, config, hmUsers, pkgs, ... }:
+{ config, hmUsers, pkgs, ... }:
 {
-  age.secrets.master_passwd.file = "${self}/secrets/master_passwd.age";
-
   home-manager.users = { inherit (hmUsers) eekrain; };
 
   users.users.eekrain = {
     name = "eekrain";
-    passwordFile = config.age.secrets.master_passwd.path;
+    passwordFile = config.age.secrets.mysecret.path;
     # password = "eka";
     description = "eekrain";
     isNormalUser = true;

@@ -4,7 +4,7 @@
   imports = suites.base;
 
   # Secrets Config
-  age.secrets.master_passwd.file = "${self}/secrets/master_passwd.age";
+  age.secrets.mysecret.file = "${self}/secrets/secret.age";
 
   # Kernel
   boot = {
