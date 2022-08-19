@@ -1,4 +1,4 @@
-{ self, suites, config, lib, pkgs, modulesPath, ... }:
+{ suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
   imports = suites.base;
@@ -123,16 +123,4 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-
-  # Secrets Config
-  age.secrets.mysecret = {
-    file = "${self}/secrets/secret.age";
-    group = "wheel";
-    mode = "0440";
-  };
-  # users.users.eekrain.passwordFile = "/run/agenix/mysecret";
-  # users.users.root.passwordFile = "/run/agenix/mysecret";
-  users.users.eekrain.passwordFile = config.age.secrets.mysecret.path;
-  users.users.root.passwordFile = config.age.secrets.mysecret.path;
 }

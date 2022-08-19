@@ -4,7 +4,7 @@
 
   users.users.eekrain = {
     name = "eekrain";
-    # password = "eka";
+    password = "eka";
     description = "eekrain";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];

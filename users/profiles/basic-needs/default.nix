@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [ vscode discord neovim ];
+
   xdg = {
     enable = true;
     userDirs.enable = true;
