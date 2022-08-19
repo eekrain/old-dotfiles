@@ -5,5 +5,5 @@ let
   allKeys = [ system user ];
 in
 {
-  "master_passwd.age".publicKeys = allKeys;
+  "secret.age".publicKeys = allKeys;
 }
