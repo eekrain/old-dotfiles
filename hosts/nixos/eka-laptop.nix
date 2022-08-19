@@ -38,12 +38,14 @@
     {
       device = "/dev/disk/by-label/root";
       fsType = "ext4";
+      neededForBoot = true;
     };
 
   fileSystems."/boot" =
     {
       device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
+      neededForBoot = true;
     };
 
   fileSystems."/nix" =
@@ -59,11 +61,6 @@
       device = "/dev/disk/by-label/home";
       fsType = "ext4";
     };
-
-  fileSystems."/etc/ssh" = {
-    depends = [ "/persist" ];
-    neededForBoot = true;
-  };
 
   swapDevices =
     [{ device = "/dev/disk/by-label/swap"; }];
