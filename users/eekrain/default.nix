@@ -4,8 +4,8 @@
 
   users.users.eekrain = {
     name = "eekrain";
-    passwordFile = config.age.secrets.mysecret.path;
-    # password = "eka";
+    # passwordFile = /run/agenix/mysecret;
+    password = "eka";
     description = "eekrain";
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" ];

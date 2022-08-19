@@ -4,7 +4,11 @@
   imports = suites.base;
 
   # Secrets Config
-  age.secrets.mysecret.file = "${self}/secrets/secret.age";
+  age.secrets.mysecret = {
+    file = "${self}/secrets/secret.age";
+    group = "wheel";
+    mode = "0440";
+  };
 
   # Kernel
   boot = {
