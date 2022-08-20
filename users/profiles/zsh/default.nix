@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  home.packages = with pkgs; [ awscli2 ];
+  home.packages = with pkgs; [ awscli2 fnm ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
@@ -48,7 +48,6 @@
         { name = "TwoPizza9621536/zsh-exa"; }
         { name = "aubreypwd/zsh-plugin-fd"; }
         { name = "skywind3000/z.lua"; }
-        { name = "dominik-schwabe/zsh-fnm"; }
         { name = "marlonrichert/zsh-autocomplete"; }
         { name = "eekrain/zsh-aws"; tags = [ defer:2 ]; }
         { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; }

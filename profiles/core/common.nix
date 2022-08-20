@@ -24,7 +24,6 @@ in
       dnsutils
       exa
       fd
-      fnm
       fzf
       git
       bottom
