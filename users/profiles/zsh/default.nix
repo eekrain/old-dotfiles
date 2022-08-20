@@ -26,6 +26,11 @@
     '';
 
     initExtra = ''
+      export ANDROID_JAVA_HOME=${pkgs.jdk.home}
+      export ANDROID_SDK_ROOT=$HOME/Library/Android/Sdk
+      export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+      export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
       eval "$(${pkgs.starship}/bin/starship init zsh)"
 
       bindkey '^[[A' history-substring-search-up

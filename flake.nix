@@ -166,6 +166,7 @@
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
               base = [
+                android
                 awesome
                 basic-needs
                 direnv

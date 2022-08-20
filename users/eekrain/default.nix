@@ -7,7 +7,7 @@
     password = "eka";
     description = "eekrain";
     isNormalUser = true;
-    extraGroups = [ "wheel" "vboxsf" ];
+    extraGroups = [ "wheel" "vboxsf" "adbusers" ];
     shell = pkgs.zsh;
   };
 }
