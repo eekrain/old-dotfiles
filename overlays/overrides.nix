@@ -17,7 +17,6 @@ channels: final: prev: {
     wezterm
     discord
     neovim
-    android-studio
     ;
 
   haskellPackages = prev.haskellPackages.override
