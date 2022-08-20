@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  home.packages = with pkgs; [ awscli2 fnm ];
+  home.packages = with pkgs; [ awscli2 nodejs-16_x yarn ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
@@ -32,7 +32,6 @@
       export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
       eval "$(${pkgs.starship}/bin/starship init zsh)"
-      eval "$(${pkgs.fnm}/bin/fnm env --use-on-cd)"
 
       bindkey '^[[A' history-substring-search-up
       bindkey '^[[B' history-substring-search-down
