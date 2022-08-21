@@ -1,13 +1,14 @@
-{ config, pkgs, nixpkgs, ... }:
+{ config, pkgs, android-nixpkgs, ... }:
 
 let
-  android-sdk = nixpkgs.android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
-    cmdline-tools-latest
-    build-tools-32-0-0
-    platform-tools
-    platforms-android-31
-    emulator
-  ]);
+  android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs;
+    [
+      cmdline-tools-latest
+      build-tools-32-0-0
+      platform-tools
+      platforms-android-31
+      emulator
+    ]);
 in
 {
   environment.systemPackages = with pkgs; [

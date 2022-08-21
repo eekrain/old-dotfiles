@@ -76,7 +76,9 @@
         channels = {
           nixos = {
             imports = [ (digga.lib.importOverlays ./overlays) ];
-            overlays = [ ];
+            overlays = [
+              android-nixpkgs.overlays.default
+            ];
           };
           nixpkgs-darwin-stable = {
             imports = [ (digga.lib.importOverlays ./overlays) ];
@@ -133,7 +135,7 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              base = [ graphical.awesome core.nixos users.root users.eekrain ];
+              base = [ graphical.awesome core.nixos users.root users.eekrain android ];
             };
           };
         };
