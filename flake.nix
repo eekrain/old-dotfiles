@@ -45,6 +45,11 @@
       nixos-hardware.url = "github:nixos/nixos-hardware";
 
       nixos-generators.url = "github:nix-community/nixos-generators";
+
+      android-nixpkgs = {
+        url = "github:tadfisher/android-nixpkgs/stable";
+        inputs.nixpkgs.follows = "nixos";
+      };
     };
 
   outputs =
@@ -58,6 +63,7 @@
     , nvfetcher
     , deploy
     , nixpkgs
+    , android-nixpkgs
     , ...
     } @ inputs:
     digga.lib.mkFlake
@@ -166,6 +172,7 @@
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
               base = [
+                android
                 awesome
                 basic-needs
                 direnv
