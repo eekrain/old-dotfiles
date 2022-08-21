@@ -180,7 +180,6 @@
                 zsh
               ];
               dev = [
-                android
                 awesome
                 basic-needs
                 direnv
