@@ -173,8 +173,6 @@
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
               base = [
-                direnv
-                fish
                 git
                 neofetch
                 zsh
