@@ -172,6 +172,14 @@
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
               base = [
+                basic-needs
+                direnv
+                fish
+                git
+                neofetch
+                zsh
+              ];
+              dev = [
                 android
                 awesome
                 basic-needs
@@ -199,9 +207,8 @@
             # it could just be left to the developer to determine what's
             # appropriate. after all, configuring these hm users is one of the
             # first steps in customizing the template.
-            nixos = { suites, ... }: { imports = suites.base; };
             darwin = { suites, ... }: { imports = suites.base; };
-            eekrain = { suites, ... }: { imports = suites.base; };
+            eekrain = { suites, ... }: { imports = suites.dev; };
           }; # digga.lib.importers.rakeLeaves ./users/hm;
         };
 
