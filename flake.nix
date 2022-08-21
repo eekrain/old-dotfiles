@@ -46,10 +46,8 @@
 
       nixos-generators.url = "github:nix-community/nixos-generators";
 
-      android-nixpkgs = {
-        url = "github:tadfisher/android-nixpkgs/stable";
-        inputs.nixpkgs.follows = "nixos";
-      };
+      android-nixpkgs.url = "github:tadfisher/android-nixpkgs/stable";
+      android-nixpkgs.inputs.nixpkgs.follows = "nixos";
     };
 
   outputs =
@@ -68,6 +66,9 @@
     } @ inputs:
     digga.lib.mkFlake
       {
+        overlay = final: prev: {
+          inherit (self.packages.${final.system}) android-sdk android-studio;
+        };
         inherit self inputs;
 
         channelsConfig = { allowUnfree = true; };
@@ -132,7 +133,7 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              base = [ graphical.awesome core.nixos users.root users.eekrain android ];
+              base = [ graphical.awesome core.nixos users.root users.eekrain ];
             };
           };
         };
@@ -172,7 +173,6 @@
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
               base = [
-                basic-needs
                 direnv
                 fish
                 git
