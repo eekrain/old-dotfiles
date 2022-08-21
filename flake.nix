@@ -172,11 +172,7 @@
           importables = rec {
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
-              base = [
-                git
-                neofetch
-                zsh
-              ];
+              base = [ git ];
               dev = [
                 awesome
                 basic-needs
