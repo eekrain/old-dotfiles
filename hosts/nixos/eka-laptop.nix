@@ -9,7 +9,7 @@
       availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" "xhci_pci" "ahci" "usb_storage" ];
       kernelModules = [ "dm-snapshot" ];
       luks.devices = {
-        root.device = "/dev/disk/by-uuid/fa088126-27e2-41fa-ab8f-90748b34ea89";
+        root.device = "/dev/disk/by-uuid/11a0e041-2991-43ce-a838-7b2fc308ea93";
       };
     };
     kernelModules = [ "kvm-intel" ];
@@ -41,22 +41,18 @@
     {
       device = "/dev/disk/by-label/root";
       fsType = "ext4";
-      neededForBoot = true;
     };
 
   fileSystems."/boot" =
     {
-      device = "/dev/disk/by-label/BOOT";
+      device = "/dev/disk/by-partlabel/boot";
       fsType = "vfat";
-      neededForBoot = true;
     };
 
   fileSystems."/nix" =
     {
       device = "/dev/disk/by-label/nix-store";
       fsType = "ext4";
-      neededForBoot = true;
-      options = [ "noatime" ];
     };
 
   fileSystems."/home" =
@@ -67,8 +63,6 @@
 
   swapDevices =
     [{ device = "/dev/disk/by-label/swap"; }];
-
-
 
   # Networking
   networking.useDHCP = lib.mkDefault true;
