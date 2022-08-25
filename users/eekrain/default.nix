@@ -9,10 +9,5 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "vboxsf" "adbusers" "libvirtd" "networkmanager" ];
     shell = pkgs.zsh;
-
-    xdg = {
-      enable = true;
-      userDirs.enable = true;
-    };
   };
 }

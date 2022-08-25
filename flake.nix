@@ -62,9 +62,6 @@
     } @ inputs:
     digga.lib.mkFlake
       {
-        overlay = final: prev: {
-          inherit (self.packages.${final.system}) android-sdk android-studio;
-        };
         inherit self inputs;
 
         channelsConfig = { allowUnfree = true; };
@@ -129,7 +126,7 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              base = [ graphical.awesome core.nixos users.root users.eekrain android ];
+              base = [ graphical.awesome core.nixos users.root users.eekrain ];
             };
           };
         };

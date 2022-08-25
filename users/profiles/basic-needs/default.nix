@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [ vscode discord neovim winbox ];
 
@@ -10,5 +10,10 @@
         id = "nngceckbapebfimnlniiiahkandclblb";
       }
     ];
+  };
+
+  xdg = {
+    enable = true;
+    userDirs.enable = true;
   };
 }
