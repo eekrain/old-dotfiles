@@ -45,9 +45,6 @@
       nixos-hardware.url = "github:nixos/nixos-hardware";
 
       nixos-generators.url = "github:nix-community/nixos-generators";
-
-      android-nixpkgs.url = "github:tadfisher/android-nixpkgs/stable";
-      android-nixpkgs.inputs.nixpkgs.follows = "nixos";
     };
 
   outputs =
@@ -61,7 +58,6 @@
     , nvfetcher
     , deploy
     , nixpkgs
-    , android-nixpkgs
     , ...
     } @ inputs:
     digga.lib.mkFlake
@@ -76,9 +72,7 @@
         channels = {
           nixos = {
             imports = [ (digga.lib.importOverlays ./overlays) ];
-            overlays = [
-              android-nixpkgs.overlays.default
-            ];
+            overlays = [ ];
           };
           nixpkgs-darwin-stable = {
             imports = [ (digga.lib.importOverlays ./overlays) ];
