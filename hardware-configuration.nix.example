@@ -5,24 +5,37 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "dm-snapshot" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
     {
-      device = "/dev/disk/by-label/nixos";
+      device = "/dev/disk/by-label/root";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
     {
-      device = "/dev/disk/by-label/BOOT";
+      device = "/dev/disk/by-partlabel/boot";
       fsType = "vfat";
+    };
+
+  fileSystems."/nix" =
+    {
+      device = "/dev/disk/by-label/nix-store";
+      fsType = "ext4";
+    };
+
+  fileSystems."/home" =
+    {
+      device = "/dev/disk/by-label/home";
+      fsType = "ext4";
     };
 
   swapDevices =
