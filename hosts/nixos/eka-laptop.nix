@@ -9,7 +9,7 @@
       availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" "xhci_pci" "ahci" "usb_storage" ];
       kernelModules = [ "dm-snapshot" ];
       luks.devices = {
-        root.device = "/dev/disk/by-uuid/11a0e041-2991-43ce-a838-7b2fc308ea93";
+        root.device = "/dev/disk/by-uuid/890d7d20-7772-4350-825b-d17eb48bbd9b";
       };
     };
     kernelModules = [ "kvm-intel" ];
