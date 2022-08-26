@@ -172,6 +172,7 @@
                 direnv
                 fish
                 git
+                macchina
                 zsh
               ];
             };
