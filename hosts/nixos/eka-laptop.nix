@@ -16,10 +16,6 @@
     extraModulePackages = [ ];
   };
 
-  # Virtualization
-  programs.adb.enable = true;
-  virtualisation.libvirtd.enable = true;
-
   # Bootloader.
   boot.loader = {
     efi = {
