@@ -172,7 +172,6 @@
                 direnv
                 fish
                 git
-                neofetch
                 zsh
               ];
             };
