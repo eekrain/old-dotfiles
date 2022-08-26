@@ -173,6 +173,7 @@
                 fish
                 git
                 macchina
+                xdg
                 zsh
               ];
             };
