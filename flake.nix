@@ -126,7 +126,16 @@
               users = digga.lib.rakeLeaves ./users;
             };
             suites = with profiles; rec {
-              base = [ core.nixos users.root users.eekrain graphical.bspwm development ];
+              base = [
+                core.nixos
+                users.root
+                users.eekrain
+                graphical.core
+                graphical.driver
+                graphical.awesome
+                graphical.bspwm
+                development
+              ];
             };
           };
         };
@@ -167,8 +176,8 @@
             suites = with profiles; rec {
               base = [ git ];
               dev = [
-                # awesome
-                bspwm
+                awesome
+                # bspwm
                 basic-needs
                 direnv
                 fish
