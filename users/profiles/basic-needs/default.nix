@@ -4,5 +4,5 @@
     ./browser.nix
   ];
 
-  home.packages = with pkgs; [ vscode discord neovim winbox ];
+  home.packages = with pkgs; [ vscode discord neovim winbox mpv ];
 }

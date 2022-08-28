@@ -11,11 +11,11 @@
         name = "WhatsApp";
         genericName = "WhatsApp";
         comment = "WhatsApp Desktop Webapp";
-        exec = "brave --app=https://web.whatsapp.com --disable-extensions	";
+        exec = "brave --disable-extensions --start-maximized --app=https://web.whatsapp.com";
         type = "Application";
         terminal = false;
         startupNotify = true;
-        categories = [ "Application" "Network" ];
+        categories = [ "Network" ];
         mimeType = [ "text/plain" ];
         settings = {
           Keywords = "WhatsApp;webapp;";
