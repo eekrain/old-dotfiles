@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 PLAYERS="spotify,%any,firefox,chromium,brave,mpd"
 ARTIST=$(playerctl -p $PLAYERS metadata --format '{{ artist }}')

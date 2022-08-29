@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 LOCK_FILE="$HOME/.cache/eww-notification-center.lock"
 EWW_BIN="$HOME/.local/bin/eww"

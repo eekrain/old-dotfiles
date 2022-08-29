@@ -1,4 +1,4 @@
-#!/bin/sh
+
 
 encode_to_url_format() {
     echo "$1" | sed 's/ /%20/g'

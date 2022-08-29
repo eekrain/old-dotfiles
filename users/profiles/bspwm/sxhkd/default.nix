@@ -15,6 +15,18 @@
       "super + Return" = "wezterm";
 
       # ##############################################################################
+      # #                                   HOTKEYS                                  #
+      # ##############################################################################
+      # Toggle control center.
+      "super + shift + {d,c}" = "sh $HOME/.config/eww/scripts/openControlCenter.sh";
+
+      # Toggle notification center.
+      "super + shift + n" = "sh $HOME/.config/eww/scripts/openNotificationCenter.sh";
+
+      # Toggle info center.
+      "super + shift + i" = "sh $HOME/.config/eww/scripts/openInfoCenter.sh";
+
+      # ##############################################################################
       # #                                 CONTROL KEYS                               #
       # ##############################################################################
       # Raise/lower volume.
