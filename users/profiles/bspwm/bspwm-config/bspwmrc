@@ -29,13 +29,13 @@ rm $HOME/.cache/eww-control-center.lock
 rm -r $HOME/.cache/dunst/
 
 # Fix cursor size.
-xsetroot -xcf /usr/share/icons/volantes-cursors/cursors/left_ptr 32
+# xsetroot -xcf /usr/share/icons/volantes-cursors/cursors/left_ptr 32
 
 # Autostart applications.
-$HOME/.local/bin/eww open bar &
-pgrep -x sxhkd > /dev/null || sxhkd &
-dunst --config $HOME/.config/dunst/dunstrc &
-picom --config $HOME/.config/picom/picom.conf &
+eww open bar &
+# pgrep -x sxhkd > /dev/null || sxhkd &
+# dunst --config $HOME/.config/dunst/dunstrc &
+# picom --config $HOME/.config/picom/picom.conf &
 
 # Start polkit agent.
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -53,8 +53,8 @@ pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &
 pkill persistentQuickUtilities.sh; $HOME/.config/bspwm/scripts/persistentQuickUtilities.sh &
 
 # Start MPD and mpDris2
-exec mpd &
-exec mpDris2 &
+# exec mpd &
+# exec mpDris2 &
 
 # ##############################################################################
 # #                                 WINDOW RULES                               #
@@ -93,6 +93,6 @@ config gapless_monocle              true
 # #                                 MISCELLANEOUS                              #
 # ##############################################################################
 
-start $HOME/.local/bin/brdr
+# start $HOME/.local/bin/brdr
 # Fix windows being below bar
 xdo lower -N eww-bar

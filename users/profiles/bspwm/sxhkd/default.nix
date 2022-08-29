@@ -10,9 +10,9 @@
       # #                                 APPLICATIONS                               #
       # ##############################################################################
       # Open web browser, and file manager.
-      "super + shift + {w,f}" = "	{brave,thunar}";
+      "super + shift + {b,f}" = "	{brave,thunar}";
       # Open terminal.
-      "super + Return" = "{tabbed -n " term " wezterm  " term " --embed}";
+      "super + Return" = ''{tabbed -n " term " wezterm  " term " --embed}'';
 
       # ##############################################################################
       # #                                 CONTROL KEYS                               #
@@ -58,16 +58,16 @@
       "super + ctrl + {Left,Down,Up,Right}" = "bspc node - p { west, south, north, east }";
       # Cancel the new window orientation.
       "super + ctrl + space" = "bspc node - p cancel";
-    };
 
-    # ##############################################################################
-    # #                             WINDOW MANAGER KEYS                            #
-    # ##############################################################################
-    # Restart sxhkd.
-    "super + ctrl + r" = ''pkill -USR1 -x sxhkd; notify-send "sxhkd" "Restarted successfully."'';
-    # Quit/restart bspwm.
-    "super + ctrl + { q, alt +r }" = "bspc {quit,wm -r}";
-    # Force restart eww.
-    "super + ctrl + e" = "pkill eww && $HOME/.local/bin/eww open bar &; pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &";
+      # ##############################################################################
+      # #                             WINDOW MANAGER KEYS                            #
+      # ##############################################################################
+      # Restart sxhkd.
+      "super + ctrl + r" = ''pkill -USR1 -x sxhkd; notify-send "sxhkd" "Restarted successfully."'';
+      # Quit/restart bspwm.
+      "super + ctrl + { q, alt +r }" = "bspc {quit,wm -r}";
+      # Force restart eww.
+      "super + ctrl + e" = "pkill eww && $HOME/.local/bin/eww open bar &; pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &";
+    };
   };
 }

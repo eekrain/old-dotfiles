@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    ./sxhkd
+  ];
   xdg.dataFile."fonts".source = ./fonts;
   xdg.dataFile."fonts".recursive = true;
 

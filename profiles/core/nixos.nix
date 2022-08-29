@@ -20,6 +20,7 @@
       playerctl
       pavucontrol
       icu
+      xdo
       xdotool
       libsForQt5.qt5.qtgraphicaleffects
       x11-emoji-picker
