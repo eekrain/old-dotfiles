@@ -82,6 +82,24 @@
       "super + ctrl + { q, alt +r }" = "bspc {quit,wm -r}";
       # Force restart eww.
       "super + ctrl + e" = "pkill eww && $HOME/.local/bin/eww open bar &; pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &";
+
+
+      # ##############################################################################
+      # #                                MOUSE HOTKEYS                               #
+      # ##############################################################################
+
+      # Close all active notifications.
+      # ~button1
+      #	bspc query -D -d .focused.!occupied && $HOME/.local/bin/eww update noti=false; sleep 0.270; $HOME/.local/bin/eww close notification-popup; pkill openEwwPopup.sh
+
+      # Toggle control center using middle click.
+      # ~button2
+      # 	bspc query -D -d .focused.!occupied && sh $HOME/.config/eww/scripts/openControlCenter.sh
+
+      # Toggle right click context menu.
+      "~button3" = ''
+        bspc query - D - d.focused.!occupied && [ [ ! -f "$HOME/.cache/eww-escreen.lock" ] ] && cd $HOME/.config/jgmenu && echo - e "$(cat ~/.config/jgmenu/menu.txt)" | jgmenu - -simple
+      '';
     };
   };
 }

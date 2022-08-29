@@ -9,7 +9,7 @@ case $1 in
 	"toggle")
 		if [[ ! -f "$LOCK_FILE" ]]; then
 			touch "$LOCK_FILE"
-			redshift -P -O 5500
+			redshift -P -l -7.8321757340401605:110.35956370306734
 		else
 			rm "$LOCK_FILE"
 			redshift -x

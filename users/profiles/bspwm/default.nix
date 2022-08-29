@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./jgmenu
     ./sxhkd
     ./dunst
     ./picom
