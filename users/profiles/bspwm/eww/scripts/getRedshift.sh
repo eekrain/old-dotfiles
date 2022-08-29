@@ -1,4 +1,4 @@
-#!/bin/sh
+
 
 LOCK_FILE="$HOME/.cache/eww-redshift.lock"
 

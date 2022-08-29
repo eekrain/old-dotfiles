@@ -1,4 +1,4 @@
-#!/bin/sh
+
 
 workspaces() {
 	# check if Occupied

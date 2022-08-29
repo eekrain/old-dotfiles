@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 LOCK_FILE="$HOME/.cache/eww-escreen.lock"
 EWW_BIN="$HOME/.local/bin/eww"

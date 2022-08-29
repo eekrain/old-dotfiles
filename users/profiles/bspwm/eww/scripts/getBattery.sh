@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # INTERNAL USE! Do not edit.
 FAKE_BATTERY="0"

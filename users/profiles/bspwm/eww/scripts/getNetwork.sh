@@ -1,4 +1,4 @@
-#!/bin/sh
+
 
 SSID=$(iwgetid -r)
 

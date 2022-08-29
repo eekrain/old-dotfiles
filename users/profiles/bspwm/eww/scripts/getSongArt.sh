@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 TMP_DIR="$HOME/.cache/eww"
 TMP_COVER_PATH=$TMP_DIR/cover.png

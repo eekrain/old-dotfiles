@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 DATE=$(date '+%b%d-%H-%M:%S.png');
 
