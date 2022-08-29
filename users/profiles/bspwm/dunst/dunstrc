@@ -65,9 +65,7 @@
 	origin = top-right
 
 	# Offset from the origin
-	# offset = 10x-300
-  offset = 10x80
-
+	offset = 10x60
 
 	# Frame
 	frame_width = 0
