@@ -6,6 +6,7 @@ channels: final: prev: {
     cachix
     dhall
     element-desktop
+    eww
     rage
     nix-index
     nixpkgs-fmt

@@ -176,15 +176,11 @@
             suites = with profiles; rec {
               base = [ git ];
               dev = [
+                config
                 # awesome
                 bspwm
-                basic-needs
-                direnv
-                fish
-                git
-                macchina
-                xdg
-                zsh
+                programs
+                cli
               ];
             };
           };
