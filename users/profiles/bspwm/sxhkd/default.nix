@@ -97,9 +97,7 @@
       # 	bspc query -D -d .focused.!occupied && sh $HOME/.config/eww/scripts/openControlCenter.sh
 
       # Toggle right click context menu.
-      "~button3" = ''
-        bspc query - D - d.focused.!occupied && [ [ ! -f "$HOME/.cache/eww-escreen.lock" ] ] && cd $HOME/.config/jgmenu && echo - e "$(cat ~/.config/jgmenu/menu.txt)" | jgmenu - -simple
-      '';
+      "~button3" = ''echo -e "$(cat ~/.config/jgmenu/menu.txt)" | jgmenu'';
     };
   };
 }
