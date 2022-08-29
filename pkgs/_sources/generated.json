@@ -12,11 +12,30 @@
             "name": null,
             "owner": "awesomeWM",
             "repo": "awesome",
-            "rev": "b7bac1dc761f7e231355e76351500a97b27b6803",
-            "sha256": "sha256-SxydaQScu0kvBn3VOnT29/Sji0Y+7my+tO46mpMggAQ=",
+            "rev": "f3cf88593c15a233092972c997528297e546f325",
+            "sha256": "sha256-U/+aLp4fHUTULk+EqP2vtzeVD5FDcUPH53owQ835G7k=",
             "type": "github"
         },
-        "version": "b7bac1dc761f7e231355e76351500a97b27b6803"
+        "version": "f3cf88593c15a233092972c997528297e546f325"
+    },
+    "picom-arian8j2-git": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "picom-arian8j2-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Arian8j2",
+            "repo": "picom",
+            "rev": "c2beb521240e0d4963cb4f165522c59985125e94",
+            "sha256": "sha256-nVHrFgStE8ya90npjtYBHTR5+uWYa65WY1Ot/KIxzRQ=",
+            "type": "github"
+        },
+        "version": "c2beb521240e0d4963cb4f165522c59985125e94"
     },
     "picom-git": {
         "cargoLocks": null,
@@ -31,11 +50,11 @@
             "name": null,
             "owner": "yshui",
             "repo": "picom",
-            "rev": "896acabab11e977a5a07e2a59d9b35bfeb167263",
-            "sha256": "sha256-QaEuewhAbaBW+rYt0eFwV1hD466ydI6ihGWasFICurI=",
+            "rev": "e0758eb5e572d5d7cf28f28e5e409f20e0bd2ded",
+            "sha256": "sha256-L0cFkKPFw92dx3P9jlkwgw7/otjUVkVZbOE0UT6gF+I=",
             "type": "github"
         },
-        "version": "896acabab11e977a5a07e2a59d9b35bfeb167263"
+        "version": "e0758eb5e572d5d7cf28f28e5e409f20e0bd2ded"
     },
     "picom-jonaburg-git": {
         "cargoLocks": null,
