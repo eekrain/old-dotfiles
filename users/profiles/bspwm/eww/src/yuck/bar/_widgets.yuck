@@ -40,7 +40,7 @@
 					:value battery_capacity
 				)
 				(label :class "battery-label"
-					:text {bat ? "${battery_capacity}%" : ""}
+					:text {bat ? "${battery_capacity}%" : "${battery_icon}"}
 				)
 			)
 		)
