@@ -10,8 +10,8 @@
   xdg.configFile."bspwm".recursive = true;
   xdg.configFile."rofi".source = ./rofi;
   xdg.configFile."rofi".recursive = true;
-  xdg.configFile."bin".source = ./bin;
-  xdg.configFile."bin".recursive = true;
+  xdg.dataFile."bin".source = ./bin;
+  xdg.dataFile."bin".recursive = true;
 
   programs = {
     eww = {

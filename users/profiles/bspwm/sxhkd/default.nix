@@ -13,6 +13,8 @@
       "super + shift + {b,f}" = "	{brave,thunar}";
       # Open terminal.
       "super + Return" = "wezterm";
+      # Open application menu.
+      "super + d" = "sh $HOME/.local/share/bin/appmnu";
 
       # ##############################################################################
       # #                                   HOTKEYS                                  #
