@@ -33,9 +33,9 @@ rm -r $HOME/.cache/dunst/
 
 # Autostart applications.
 eww open bar &
+picom --config $HOME/.config/picom/picom.conf &
 # pgrep -x sxhkd > /dev/null || sxhkd &
 # dunst --config $HOME/.config/dunst/dunstrc &
-# picom --config $HOME/.config/picom/picom.conf &
 
 # Start polkit agent.
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
