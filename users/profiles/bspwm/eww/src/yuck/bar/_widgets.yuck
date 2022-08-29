@@ -31,7 +31,7 @@
 		:tooltip "Battery: ${battery_capacity}%"
 		
 		(eventbox
-			:onclick "${EWW_CMD} update bat=${!bat}"
+      :onclick "${EWW_CMD} update bat=${!bat}"
 			(overlay
 				(scale :class "battery-scale"
 					:min 0

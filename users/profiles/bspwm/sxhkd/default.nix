@@ -12,7 +12,7 @@
       # Open web browser, and file manager.
       "super + shift + {b,f}" = "	{brave,thunar}";
       # Open terminal.
-      "super + Return" = ''{tabbed -n " term " wezterm  " term " --embed}'';
+      "super + Return" = "wezterm";
 
       # ##############################################################################
       # #                                 CONTROL KEYS                               #
