@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ASSETS_DIR="$HOME/.config/dunst/assets/notification"
 
 if [[ -z $(amixer get Master | grep off) ]]; then

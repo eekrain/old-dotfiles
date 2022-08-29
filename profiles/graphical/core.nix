@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 {
+  environment = {
+    systemPackages = with pkgs; [
+      redshift
+    ];
+  };
+
   location.provider = "manual";
   location.latitude = -7.8;
   location.longitude = 110.3;
@@ -8,7 +14,6 @@
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
     acpid.enable = true;
-    redshift.enable = true;
     picom.enable = true;
 
     dbus = {

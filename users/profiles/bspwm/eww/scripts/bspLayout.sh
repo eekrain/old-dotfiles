@@ -1,5 +1,3 @@
-
-
 FOCUSED_DESKTOP=$(bspc query -D -d focused --names)
 LAYOUT=$(bsp-layout get $FOCUSED_DESKTOP)
 
