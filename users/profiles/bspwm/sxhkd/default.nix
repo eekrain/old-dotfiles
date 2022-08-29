@@ -81,7 +81,7 @@
       # Quit/restart bspwm.
       "super + ctrl + { q, alt +r }" = "bspc {quit,wm -r}";
       # Force restart eww.
-      "super + ctrl + e" = "pkill eww && $HOME/.local/bin/eww open bar &; pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &";
+      "super + ctrl + e" = "pkill eww && /etc/profiles/per-user/$USER/bin/eww open bar &; pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &";
 
 
       # ##############################################################################
