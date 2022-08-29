@@ -1,7 +1,7 @@
 
 
 LOCK_FILE="$HOME/.cache/eww-info-center.lock"
-EWW_BIN="$HOME/.local/bin/eww"
+EWW_BIN="/etc/profiles/per-user/$USER/bin/eww"
 
 run() {
 	${EWW_BIN} open info-center
