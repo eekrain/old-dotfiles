@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  home.packages = with pkgs; [ libnotify ];
+
   xdg.configFile."dunst/dunstrc".source = ./dunstrc;
   xdg.configFile."dunst/assets".source = ./assets;
   xdg.configFile."dunst/assets".recursive = true;

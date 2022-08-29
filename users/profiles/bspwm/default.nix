@@ -2,6 +2,7 @@
 {
   imports = [
     ./sxhkd
+    ./dunst
   ];
 
   xdg.configFile."bspwm".source = ./bspwm-config;

@@ -13,6 +13,10 @@ git.fetchSubmodules = true
 src.git = "https://github.com/jonaburg/picom"
 fetch.github = "jonaburg/picom"
 git.fetchSubmodules = true
+[picom-arian8j2-git]
+src.git = "https://github.com/Arian8j2/picom"
+fetch.github = "Arian8j2/picom"
+git.fetchSubmodules = true
 [awesome-git]
 src.git = "https://github.com/awesomeWM/awesome"
 fetch.github = "awesomeWM/awesome"

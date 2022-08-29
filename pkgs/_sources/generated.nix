@@ -3,24 +3,35 @@
 {
   awesome-git = {
     pname = "awesome-git";
-    version = "b7bac1dc761f7e231355e76351500a97b27b6803";
+    version = "f3cf88593c15a233092972c997528297e546f325";
     src = fetchFromGitHub ({
       owner = "awesomeWM";
       repo = "awesome";
-      rev = "b7bac1dc761f7e231355e76351500a97b27b6803";
+      rev = "f3cf88593c15a233092972c997528297e546f325";
       fetchSubmodules = false;
-      sha256 = "sha256-SxydaQScu0kvBn3VOnT29/Sji0Y+7my+tO46mpMggAQ=";
+      sha256 = "sha256-U/+aLp4fHUTULk+EqP2vtzeVD5FDcUPH53owQ835G7k=";
+    });
+  };
+  picom-arian8j2-git = {
+    pname = "picom-arian8j2-git";
+    version = "c2beb521240e0d4963cb4f165522c59985125e94";
+    src = fetchFromGitHub ({
+      owner = "Arian8j2";
+      repo = "picom";
+      rev = "c2beb521240e0d4963cb4f165522c59985125e94";
+      fetchSubmodules = true;
+      sha256 = "sha256-nVHrFgStE8ya90npjtYBHTR5+uWYa65WY1Ot/KIxzRQ=";
     });
   };
   picom-git = {
     pname = "picom-git";
-    version = "896acabab11e977a5a07e2a59d9b35bfeb167263";
+    version = "e0758eb5e572d5d7cf28f28e5e409f20e0bd2ded";
     src = fetchFromGitHub ({
       owner = "yshui";
       repo = "picom";
-      rev = "896acabab11e977a5a07e2a59d9b35bfeb167263";
+      rev = "e0758eb5e572d5d7cf28f28e5e409f20e0bd2ded";
       fetchSubmodules = true;
-      sha256 = "sha256-QaEuewhAbaBW+rYt0eFwV1hD466ydI6ihGWasFICurI=";
+      sha256 = "sha256-L0cFkKPFw92dx3P9jlkwgw7/otjUVkVZbOE0UT6gF+I=";
     });
   };
   picom-jonaburg-git = {
