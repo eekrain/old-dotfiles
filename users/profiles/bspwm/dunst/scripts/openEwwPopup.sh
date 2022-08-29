@@ -2,7 +2,7 @@
 
 DND_LOCK_FILE="$HOME/.cache/dnd-lock.lock"
 LOCK_FILE="$HOME/.cache/eww-notif-popup.lock"
-EWW_BIN="$HOME/.local/bin/eww"
+EWW_BIN="/etc/profiles/per-user/$USER/bin/eww"
 
 finish() {
 	${EWW_BIN} update noti=false; sleep 0.075
