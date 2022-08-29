@@ -23,6 +23,8 @@
 	"brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 (defpoll battery_capacity :interval "1s"
 	"./scripts/getBattery.sh capacity")
+(defpoll battery_icon :interval "1s"
+	"./scripts/getBattery.sh icon")
 
 ;; MUSIC PLAYER VARS
 (defpoll art :interval "1s"
