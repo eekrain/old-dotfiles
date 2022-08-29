@@ -13,6 +13,7 @@
   xdg.configFile."rofi".recursive = true;
   xdg.dataFile."bin".source = ./bin;
   xdg.dataFile."bin".recursive = true;
+  xdg.dataFile."gtk-3.0".source = ./gtk-3.0;
 
   programs = {
     eww = {
