@@ -20,7 +20,7 @@ title() {
 	if [[ -z "$TITLE" ]]; then
 		echo "Nothing Playing"
 		
-		[[ -f "$HOME/.cache/eww-control-center.lock" ]] && $HOME/.local/bin/eww update mp=false
+		[[ -f "$HOME/.cache/eww-control-center.lock" ]] && ${EWW_BIN} update mp=false
 	else
 		# Eww can't truncate Japanese and Chinese characters.
 		if [[ "$TITLE" =~ ^[一-龠]+|[ぁ-ゔ]+|[ァ-ヴー]+ ]]; then
@@ -29,7 +29,7 @@ title() {
 			echo $TITLE
 		fi
 
-		[[ -f "$HOME/.cache/eww-control-center.lock" ]] && $HOME/.local/bin/eww update mp=true
+		[[ -f "$HOME/.cache/eww-control-center.lock" ]] && ${EWW_BIN} update mp=true
 	fi
 }
 
