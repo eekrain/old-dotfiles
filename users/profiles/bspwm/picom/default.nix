@@ -2,5 +2,5 @@
 {
   home.packages = with pkgs; [ picom ];
 
-  xdg.configFile."picom".source = ./picom;
+  xdg.configFile."picom/picom.conf".source = ./picom.conf;
 }
