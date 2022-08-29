@@ -2,7 +2,7 @@
 
 DATE=$(date '+%b%d-%H-%M:%S.png');
 
-EWW_BIN="$HOME/.local/bin/eww"
+EWW_BIN="/etc/profiles/per-user/$USER/bin/eww"
 AIRPLANE_MODE_LOCK_FILE="$HOME/.cache/airplane-mode.lock"
 DND_LOCK_FILE="$HOME/.cache/dnd-lock.lock"
 JEFF_LOCK_FILE="$HOME/.cache/jeff-lock.lock"

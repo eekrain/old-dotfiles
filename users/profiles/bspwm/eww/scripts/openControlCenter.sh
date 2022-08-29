@@ -1,5 +1,5 @@
 LOCK_FILE="$HOME/.cache/eww-control-center.lock"
-EWW_BIN="/etc/profiles/per-user/eekrain/bin/eww"
+EWW_BIN="/etc/profiles/per-user/$USER/bin/eww"
 ACTIVE_PLAYERS=$(playerctl -l | head -n 1)
 
 fix_stacking_bug() {
