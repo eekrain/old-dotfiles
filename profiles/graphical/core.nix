@@ -14,7 +14,6 @@
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
     acpid.enable = true;
-    picom.enable = true;
 
     dbus = {
       enable = true;
