@@ -8,10 +8,10 @@ super + shift + {w,f}
 
 # Open terminal.
 super + Return
-	tabbed -n "term" alacritty -t "term" --embed
+	tabbed -n "term" wezterm -t "term" --embed
 
 super + alt + Return
-    bspc rule -a tabbed -o state=floating rectangle=$(slop) && tabbed -n "term" alacritty -t "term" --embed
+    bspc rule -a tabbed -o state=floating rectangle=$(slop) && tabbed -n "term" wezterm -t "term" --embed
 
 # Open application menu.
 super + d

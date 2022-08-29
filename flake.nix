@@ -132,7 +132,7 @@
                 users.eekrain
                 graphical.core
                 graphical.driver
-                graphical.awesome
+                # graphical.awesome
                 graphical.bspwm
                 development
               ];
@@ -176,8 +176,8 @@
             suites = with profiles; rec {
               base = [ git ];
               dev = [
-                awesome
-                # bspwm
+                # awesome
+                bspwm
                 basic-needs
                 direnv
                 fish

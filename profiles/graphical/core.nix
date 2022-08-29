@@ -25,10 +25,10 @@
         enable = true;
         touchpad.disableWhileTyping = true;
       };
-    };
 
-    displayManager.defaultSession = "none+awesome";
-    desktopManager.xterm.enable = false;
+      displayManager.defaultSession = "none+bspwm";
+      desktopManager.xterm.enable = false;
+    };
 
     # disable automatic screen blanking and stuff, we'll do it manually instead
     # serverFlagsSection = ''

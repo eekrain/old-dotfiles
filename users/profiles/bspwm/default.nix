@@ -7,9 +7,6 @@
   xdg.configFile."bspwm".recursive = true;
 
   xdg.configFile."wezterm".source = ./wezterm;
-  xdg.configFile."sxhkd".source = ./sxhkd;
-  xdg.configFile."sxhkd".recursive = true;
-
   programs = {
     eww = {
       enable = true;

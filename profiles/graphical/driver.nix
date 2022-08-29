@@ -9,5 +9,5 @@
     };
   };
 
-  services.xvideoDrivers = [ "intel nvidia" ];
+  services.xserver.videoDrivers = [ "intel" "nvidia" ];
 }
