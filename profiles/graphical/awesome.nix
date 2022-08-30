@@ -24,8 +24,6 @@
 
 
   services = {
-    mpd.enable = true;
-
     xserver = {
       windowManager.awesome.enable = true;
     };

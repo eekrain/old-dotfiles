@@ -7,6 +7,9 @@
       bsp-layout
       i3lock-color
       libcanberra-gtk3
+      mpc-cli
+      mpd
+      mpdris2
     ];
   };
 
