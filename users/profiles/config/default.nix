@@ -37,7 +37,10 @@
   home = {
     pointerCursor = {
       gtk.enable = true;
-      x11.enable = true;
+      x11 = {
+        enable = true;
+        defaultCursor = "left_ptr";
+      };
       # size = 40;
       # package = pkgs.nur.repos.ambroisie.vimix-cursors;
       # name = "Vimix-white-cursors";
