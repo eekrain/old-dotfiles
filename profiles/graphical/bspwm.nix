@@ -5,6 +5,7 @@
       python3Full
       rofi
       bsp-layout
+      i3lock-color
     ];
   };
 
