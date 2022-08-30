@@ -19,6 +19,7 @@ channels: final: prev: {
     wezterm
     discord
     neovim
+    wmutils-opt
     ;
 
   haskellPackages = prev.haskellPackages.override

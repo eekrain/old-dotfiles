@@ -12,8 +12,7 @@
       # Open web browser, and file manager.
       "super + shift + {b,f}" = "	{brave,thunar}";
       # Open terminal.
-      "super + Return" = ''tabbed -n "term" wezterm -t "term" --embed'';
-      "super + alt + Return" = ''bspc rule -a tabbed -o state=floating rectangle=$(slop) && tabbed -n "term" wezterm -t "term" --embed'';
+      "super + Return" = ''wezterm'';
       # Open application menu.
       "super + d" = "sh $HOME/.local/share/bin/appmnu";
 
@@ -36,6 +35,8 @@
       "XF86Audio{Raise,Lower}Volume" = "amixer -q set Master 5%{+,-}";
       # Mute/unmute volume.
       "XF86AudioMute" = "sh $HOME/.config/sxhkd/scripts/audioToggle.sh";
+      # Toggle touchpad
+      "XF86TouchpadToggle" = "sh $HOME/.config/sxhkd/scripts/audioToggle.sh";
       # Raise/lower brightness.
       "XF86MonBrightness{Up,Down}" = "brightnessctl set 5%{+,-}";
       # Raise/lower brightness to maximum or minimum.
