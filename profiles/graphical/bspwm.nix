@@ -6,6 +6,7 @@
       rofi
       bsp-layout
       i3lock-color
+      libcanberra-gtk3
     ];
   };
 

@@ -5,7 +5,6 @@
       redshift
       brightnessctl
       xfce.thunar
-      libcanberra
     ];
   };
 
