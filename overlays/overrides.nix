@@ -21,6 +21,7 @@ channels: final: prev: {
     neovim
     wmutils-opt
     libcanberra-gtk3
+    pavucontrol
     ;
 
   haskellPackages = prev.haskellPackages.override
