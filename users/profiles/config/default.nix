@@ -7,7 +7,7 @@
       enable = true;
       createDirectories = true;
       extraConfig = {
-        XDG_SCREENSHOT_DIR = "$HOME/Pictures/Screenshot";
+        XDG_SCREENSHOT_DIR = "$HOME/Pictures/Screenshots";
       };
     };
 
