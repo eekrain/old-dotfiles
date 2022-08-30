@@ -22,6 +22,7 @@ channels: final: prev: {
     wmutils-opt
     libcanberra-gtk3
     pavucontrol
+    trash-cli
     ;
 
   haskellPackages = prev.haskellPackages.override
