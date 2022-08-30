@@ -93,6 +93,6 @@ config gapless_monocle              true
 # #                                 MISCELLANEOUS                              #
 # ##############################################################################
 
-# start $HOME/.local/bin/brdr
+start $HOME/.local/share/bin/border
 # Fix windows being below bar
 xdo lower -N eww-bar

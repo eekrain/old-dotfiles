@@ -1,6 +1,6 @@
 (defwindow control-center
 	:geometry (geometry :x "-1%"
-						:y "-60%" 
+						:y "-67%" 
 						:width "26%" 
 						:height "80%"
 						:anchor "top right")
