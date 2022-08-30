@@ -6,7 +6,7 @@
     ./dunst
     ./picom
   ];
-  home.packages = with pkgs; [ wmutils-opt tabbed ];
+  home.packages = with pkgs; [ wmutils-opt ];
 
 
   xdg.configFile."bspwm".source = ./bspwm-config;
