@@ -42,7 +42,7 @@
       # Raise/lower brightness to maximum or minimum.
       "super + XF86MonBrightness{Up,Down}" = "brightnessctl set {100%,30%}";
       # Screenshot; Save to local storage.
-      "super + Print" = ''FILENAME=$(date '+%d-%m-%Y %H:%M:%S.png'); maim -us "$HOME/Pictures/Screenshots/$FILENAME"; sh $HOME/.local/share/bin/viewscr $HOME/Pictures/Screenshots/$FILENAME'';
+      "super + Print" = ''FILENAME=$(date '+%d-%m-%Y_%H:%M:%S.png'); maim -us "$HOME/Pictures/Screenshots/$FILENAME"; sh $HOME/.local/share/bin/viewscr $HOME/Pictures/Screenshots/$FILENAME'';
 
       # ##############################################################################
       # #                                 WINDOW KEYS                                #

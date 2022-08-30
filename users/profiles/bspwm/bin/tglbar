@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Toggles eww bar and resizes bspwm padding.
 
 LOCK_FILE="$HOME/.cache/bar.lck"
