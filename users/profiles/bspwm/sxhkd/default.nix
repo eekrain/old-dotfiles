@@ -58,7 +58,7 @@
       # Move active  workspace.
       "super + {1-5}" = "bspc desktop -f '^{1-5}'";
       #Move window to workspace and follow it
-      "super + shift + {1-5}" = ''id=$(bspc query -N -n); bspc node -d ^{1-5}; bspc node -f ${id}'';
+      "super + shift + {1-5}" = ''id=$(bspc query -N -n); bspc node -d ^{1-5}; bspc node -f $id'';
       # Shrink focused window.
       "super + shift + { h, j, k, l }" = "bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}";
       "super + shift + {Right,Up,Down,Left}" = "bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}";
