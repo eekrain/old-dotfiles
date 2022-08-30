@@ -12,7 +12,8 @@
       # Open web browser, and file manager.
       "super + shift + {b,f}" = "	{brave,thunar}";
       # Open terminal.
-      "super + Return" = "wezterm";
+      "super + Return" = ''tabbed -n "term" wezterm -t "term" --embed'';
+      "super + alt + Return" = ''bspc rule -a tabbed -o state=floating rectangle=$(slop) && tabbed -n "term" wezterm -t "term" --embed'';
       # Open application menu.
       "super + d" = "sh $HOME/.local/share/bin/appmnu";
 
