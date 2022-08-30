@@ -9,7 +9,6 @@
       xclip
       gpick
       ffmpeg
-      brightnessctl
       feh
       maim
       mpc-cli

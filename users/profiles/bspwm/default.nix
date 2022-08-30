@@ -6,7 +6,15 @@
     ./dunst
     ./picom
   ];
-  home.packages = with pkgs; [ wmutils-opt ];
+  home.packages = with pkgs; [
+    wmutils-opt
+    hsetroot
+    maim
+    imagemagick
+    xclip
+    giph
+    viewnior
+  ];
 
 
   xdg.configFile."bspwm".source = ./bspwm-config;
