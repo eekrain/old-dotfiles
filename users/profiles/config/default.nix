@@ -70,7 +70,7 @@
     gtk3.extraConfig = {
       gtk-enable-event-sounds = true;
       gtk-enable-input-feedback-sounds = true;
-      gtk-sound-theme-name = freedesktop;
+      gtk-sound-theme-name = "freedesktop";
     };
   };
 }
