@@ -5,6 +5,8 @@
       redshift
       brightnessctl
       xfce.thunar
+      xfce.exo
+      trash-cli
     ];
   };
 
