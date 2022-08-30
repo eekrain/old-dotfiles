@@ -2,13 +2,13 @@
 {
   imports = [
     ./browser.nix
+    ./neovim
   ];
 
   home.packages = with pkgs; [
     yarn2nix
     vscode
     discord
-    neovim
     winbox
     mpv
     cava
