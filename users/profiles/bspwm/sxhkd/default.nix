@@ -36,7 +36,7 @@
       # Mute/unmute volume.
       "XF86AudioMute" = "sh $HOME/.config/sxhkd/scripts/audioToggle.sh";
       # Toggle touchpad
-      "XF86TouchpadToggle" = "sh $HOME/.config/sxhkd/scripts/audioToggle.sh";
+      "XF86TouchpadToggle" = "sh $HOME/.config/sxhkd/scripts/touchpadToggle.sh";
       # Raise/lower brightness.
       "XF86MonBrightness{Up,Down}" = "brightnessctl set 5%{+,-}";
       # Raise/lower brightness to maximum or minimum.
