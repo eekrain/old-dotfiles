@@ -26,7 +26,6 @@
   xdg.dataFile."bin".source = ./bin;
   xdg.dataFile."bin".recursive = true;
 
-  xdg.configFile."gtk-3.0".source = ./gtk-3.0;
   xdg.configFile."cava".source = ./cava;
   xdg.configFile."mpDris2".source = ./mpDris2;
   xdg.configFile."spicetify".source = ./spicetify;
