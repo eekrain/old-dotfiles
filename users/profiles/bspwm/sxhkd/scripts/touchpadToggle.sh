@@ -9,8 +9,8 @@ device="$(xinput list | grep -P '(?<= )[\w\s:]*(?i)(touchpad|synaptics)(?-i).*?(
 if [[ "$(xinput list-props "$device" | grep -P ".*Device Enabled.*\K.(?=$)" -o)" == "1" ]]
 then
   xinput disable "$device"
-  notify-send -a "Touchpad Manager" -i "$ASSETS_DIR/touchpad_disabled.png" "Volume Muted" "Volume has been muted."
+  notify-send -a "Touchpad Manager" -i "$ASSETS_DIR/touchpad_disabled.png" "Touchpad Disabled" "Touchpad input has been disabled."
 else
   xinput enable "$device"
-  notify-send -a "VolTouchpadume Manager" -i "$ASSETS_DIR/touchpad_enabled.png" "Volume Enabled" "Volume has been unmuted."
+  notify-send -a "Touchpad Manager" -i "$ASSETS_DIR/touchpad_enabled.png" "Touchpad Enabled" "Touchpad input has been enabled."
 fi
