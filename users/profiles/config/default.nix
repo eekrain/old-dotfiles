@@ -3,8 +3,13 @@
 
   xdg = {
     enable = true;
-    userDirs.enable = true;
-    userDirs.createDirectories = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+      extraConfig = {
+        XDG_SCREENSHOT_DIR = "$HOME/Pictures/Screenshot";
+      };
+    };
 
     dataFile."fonts".source = ./fonts;
     dataFile."fonts".recursive = true;
