@@ -4,6 +4,7 @@
     systemPackages = with pkgs; [
       redshift
       brightnessctl
+      xfce.thunar
     ];
   };
 
@@ -11,6 +12,7 @@
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
     acpid.enable = true;
+    devmon.enable = true;
 
     dbus = {
       enable = true;

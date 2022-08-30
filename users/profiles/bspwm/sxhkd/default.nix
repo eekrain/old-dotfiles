@@ -58,7 +58,11 @@
       # Move the focused window by direction.
       "super + {Left,Down,Up,Right}" = "bspc node -v {-20 0,0 20,0 -20,20 0}";
       # Move to or send window to workspace.
-      "super + {_,shift + }{1-5}" = "bspc {desktop -f,node -d} '^{1-5}'";
+      # "super + {_,shift + }{1-5}" = "bspc {desktop -f,node -d} '^{1-5}'";
+      # Move active  workspace.
+      "super + {1-5}" = "bspc desktop -f '^{1-5}'";
+      #Move window to workspace and follow it
+      "super + shift + {1-5}" = "bspc node -d '^{1-5}' && bspc desktop -f '^{1-5}'";
       # Shrink focused window.
       "super + shift + { h, j, k, l }" = "bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}";
       "super + shift + {Right,Up,Down,Left}" = "bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}";
