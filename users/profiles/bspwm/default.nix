@@ -6,6 +6,8 @@
     ./dunst
     ./picom
   ];
+  home.packages = with pkgs; [ chwb2 tabbed ];
+
 
   xdg.configFile."bspwm".source = ./bspwm-config;
   xdg.configFile."bspwm".recursive = true;
