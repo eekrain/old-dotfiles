@@ -10,17 +10,14 @@
     ];
   };
 
+  programs.dconf.enable = true;
+
   services = {
     gnome.gnome-keyring.enable = true;
     upower.enable = true;
     acpid.enable = true;
     devmon.enable = true;
     mpd.enable = true;
-
-    dbus = {
-      enable = true;
-      packages = [ pkgs.dconf ];
-    };
 
 
     xserver = {
