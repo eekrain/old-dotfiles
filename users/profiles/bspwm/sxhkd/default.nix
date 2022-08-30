@@ -45,7 +45,7 @@
       "{super,ctrl} + Print" = ''
         DATE = $(date ' + %b%d-%H-%M:%S.png'); \
         maim -us "$HOME/Pictures/Screenshots/$DATE"; \
-        sh $HOME/.local/bin/{viewscr,upldscr} $HOME/Pictures/Screenshots/$DATE
+        sh $HOME/.local/share/bin/{viewscr,upldscr} $HOME/Pictures/Screenshots/$DATE
       '';
 
       # ##############################################################################
@@ -96,7 +96,7 @@
 
       # Close all active notifications.
       # ~button1
-      #	bspc query -D -d '.focused.!occupied' && $HOME/.local/bin/eww update noti=false; sleep 0.270; $HOME/.local/bin/eww close notification-popup; pkill openEwwPopup.sh
+      #	bspc query -D -d '.focused.!occupied' && eww update noti=false; sleep 0.270; eww close notification-popup; pkill openEwwPopup.sh
 
       # Toggle control center using middle click.
       # ~button2
