@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # ##############################################################################
-# #                                  ENV VARS                                  # 
+# #                                  ENV VARS                                  #
 # ##############################################################################
 
 export WALLPAPER="$HOME/.config/bspwm/assets/wallpaper.png"
 export LOCKSCREEN_WALLPAPER="$HOME/.config/bspwm/assets/lockscreen.png"
 
 # ##############################################################################
-# #                                  FUNCTIONS                                 # 
+# #                                  FUNCTIONS                                 #
 # ##############################################################################
 
 # Credits to 6gk/polka
@@ -46,6 +46,7 @@ hsetroot -solid "#1C2325"
 
 # I hate mouse drift.
 xset m 0 0
+xsetroot -cursor_name left_ptr
 
 # Fix for eww bar not hiding on a fullscreen window.
 pkill ewwFullscreenFix.sh; $HOME/.config/bspwm/scripts/ewwFullscreenFix.sh &
