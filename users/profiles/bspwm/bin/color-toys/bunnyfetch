@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Tiny colored fetch script
 # Requires Typicons Font to display the icons
 # elenapan @ github

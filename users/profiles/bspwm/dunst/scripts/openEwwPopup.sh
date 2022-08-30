@@ -1,27 +1,19 @@
-#!/bin/bash
+#!/bin/sh
+# Toggles eww bar and resizes bspwm padding.
 
-DND_LOCK_FILE="$HOME/.cache/dnd-lock.lock"
-LOCK_FILE="$HOME/.cache/eww-notif-popup.lock"
-EWW_BIN="/etc/profiles/per-user/$USER/bin/eww"
+LOCK_FILE="$HOME/.cache/bar.lck"
+EWW_BIN="eww"
 
-finish() {
-	${EWW_BIN} update noti=false; sleep 0.075
-	${EWW_BIN} close notification-popup
-	rm -f ${LOCK_FILE}
-}
-
-# Run eww daemon if not running
-if [[ ! `pidof eww` ]]; then
-	${EWW_BIN} daemon
-	sleep 1
+if [[ ! -f "$LOCK_FILE" ]]; then
+  touch "$LOCK_FILE"
+  ${EWW_BIN} close bar; sleep 0.4
+  bspc config top_padding 0
 else
-	if [[ -f "$LOCK_FILE" ]]; then
-		sleep 0.275 && ${EWW_BIN} update has_another_notif=true && canberra-gtk-play -i message-new-instant
-	fi
-
-	if [[ ! -f "$DND_LOCK_FILE" ]]; then
-		KILLED=false
-		for pid in $(pidof -x openEwwPopup.sh); do
+  rm "$LOCK_FILE"
+  bspc config top_padding 48
+  
+  sleep 0.4; ${EWW_BIN} open bar && xdo lower -N eww-bar
+fi
 			if [ $pid != $$ ]; then
 				kill -9 $pid
 				KILLED=true
