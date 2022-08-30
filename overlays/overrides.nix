@@ -20,6 +20,7 @@ channels: final: prev: {
     discord
     neovim
     wmutils-opt
+    libcanberra-gtk3
     ;
 
   haskellPackages = prev.haskellPackages.override
