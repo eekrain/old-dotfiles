@@ -20,6 +20,7 @@
         comment = "WhatsApp Desktop Webapp";
         exec = "chromium --start-maximized --app=https://web.whatsapp.com";
         type = "Application";
+        icon = "whatsapp.svg";
         terminal = false;
         startupNotify = true;
         categories = [ "Network" ];

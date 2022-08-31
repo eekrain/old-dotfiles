@@ -39,7 +39,6 @@ dunst --config $HOME/.config/dunst/dunstrc &
 discord &
 chromium --start-maximized --app=https://web.whatsapp.com &
 
-
 # Start polkit agent.
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
@@ -69,7 +68,7 @@ rule Brave-browser                  desktop=1
 rule Code                           desktop=2
 rule Steam                          desktop=4
 rule discord                        desktop=5 follow=off
-rule chromium                       desktop=5 follow=off
+rule Chromium-browser               desktop=5 follow=off
 
 rule Viewnior                       state=floating
 rule mpv                            state=fullscreen follow=on
@@ -99,5 +98,5 @@ start $HOME/.local/share/bin/border
 # Fix windows being below bar
 xdo lower -N eww-bar
 amixer sset 'Master' 50%
-$HOME/.config/bspwm/scripts/whatsappAutostart.sh
+# $HOME/.config/bspwm/scripts/whatsappAutostart.sh
 
