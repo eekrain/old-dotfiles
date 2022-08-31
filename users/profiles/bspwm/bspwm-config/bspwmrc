@@ -36,6 +36,8 @@ pkill dunst &
 eww open bar &
 picom --config $HOME/.config/picom/picom.conf &
 dunst --config $HOME/.config/dunst/dunstrc &
+discord &
+brave --disable-extensions --start-maximized --app=https://web.whatsapp.com &
 
 # Start polkit agent.
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -62,10 +64,8 @@ pkill persistentQuickUtilities.sh; $HOME/.config/bspwm/scripts/persistentQuickUt
 
 bspc monitor -d 1 2 3 4 5
 
-rule Brave                          desktop=1 follow=on
 rule Code                           desktop=2
 rule Steam                          desktop=4
-rule Whatsapp                       desktop=5 follow=off
 rule discord                        desktop=5 follow=off
 
 rule Viewnior                       state=floating
