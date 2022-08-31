@@ -62,6 +62,11 @@ pkill persistentQuickUtilities.sh; $HOME/.config/bspwm/scripts/persistentQuickUt
 # #                                 WINDOW RULES                               #
 # ##############################################################################
 
+bspc config border_width         4
+bspc config window_gap          12
+bspc config active_border_color \#E84F4F
+bspc config normal_border_color \#6E7071
+
 bspc monitor -d 1 2 3 4 5
 
 rule Brave-browser                  desktop=1
@@ -94,7 +99,6 @@ config gapless_monocle              true
 # #                                 MISCELLANEOUS                              #
 # ##############################################################################
 
-start $HOME/.local/share/bin/border
 # Fix windows being below bar
 xdo lower -N eww-bar
 amixer sset 'Master' 50%
