@@ -17,3 +17,6 @@ git.fetchSubmodules = true
 src.git = "https://github.com/Arian8j2/picom"
 fetch.github = "Arian8j2/picom"
 git.fetchSubmodules = true
+[tokyo-night-gtk-theme]
+src.git = "https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
+fetch.github = "Fausto-Korpsvart/Tokyo-Night-GTK-Theme"

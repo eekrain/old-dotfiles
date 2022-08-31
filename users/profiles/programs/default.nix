@@ -6,7 +6,6 @@
   ];
 
   home.packages = with pkgs; [
-    yarn2nix
     vscode
     discord
     winbox
