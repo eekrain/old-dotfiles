@@ -103,5 +103,5 @@ config gapless_monocle              true
 # Fix windows being below bar
 xdo lower -N eww-bar
 amixer sset 'Master' 50%
-# $HOME/.config/bspwm/scripts/whatsappAutostart.sh
+$HOME/.config/sxhkd/scripts/touchpadToggle.sh
 
