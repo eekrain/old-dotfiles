@@ -72,7 +72,7 @@
     };
 
     iconTheme = {
-      name = "zafiro-icons";
+      name = "Zafiro-icons";
       package = pkgs.zafiro-icons;
     };
 
