@@ -7,8 +7,7 @@ stdenv.mkDerivation
 
   installPhase = ''
     mkdir -p $out/share/themes/
-    cp -rf themes/Tokyo* ./test
-    cp -rf Tokyonight* $out/share/themes/
+    cp -rf themes/Tokyonight* $out/share/themes/
   '';
 
   meta = with lib; {
