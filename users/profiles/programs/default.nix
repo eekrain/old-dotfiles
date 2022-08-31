@@ -12,5 +12,7 @@
     winbox
     mpv
     cava
+    spotify
+    spicetify-cli
   ];
 }
