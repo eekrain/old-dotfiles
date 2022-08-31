@@ -26,6 +26,7 @@ channels: final: prev: {
     spotify
     spicetify-cli
     whatsapp-for-linux
+    bspwm
     ;
 
   haskellPackages = prev.haskellPackages.override

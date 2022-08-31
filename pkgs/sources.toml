@@ -20,6 +20,3 @@ git.fetchSubmodules = true
 [tokyo-night-gtk-theme]
 src.git = "https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
 fetch.github = "Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
-[bspwm-rounded]
-src.git = "https://github.com/phuhl/bspwm-rounded"
-fetch.github = "phuhl/bspwm-rounded"
