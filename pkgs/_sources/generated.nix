@@ -45,6 +45,17 @@
       sha256 = "sha256-mAXExj8n8gFHq19HfGy4UOJYKVGPYgarGd/04kUIqX4=";
     });
   };
+  tokyo-night-gtk-theme = {
+    pname = "tokyo-night-gtk-theme";
+    version = "6bbb8954b62cd6fb696f7811e7e8049f89c51393";
+    src = fetchFromGitHub ({
+      owner = "Fausto-Korpsvart";
+      repo = "Tokyo-Night-GTK-Theme";
+      rev = "6bbb8954b62cd6fb696f7811e7e8049f89c51393";
+      fetchSubmodules = false;
+      sha256 = "sha256-5dkkfCS9d9detnTn86WcCUQCgDFJ9NI/tyHg8jqxKOI=";
+    });
+  };
   x11-emoji-picker = {
     pname = "x11-emoji-picker";
     version = "7650a30914fc4fe0ca332d7674f9206bef408e4e";

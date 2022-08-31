@@ -62,8 +62,10 @@
     enable = true;
 
     theme = {
-      name = "Numix";
-      package = pkgs.numix-gtk-theme;
+      # name = "Numix";
+      # package = pkgs.numix-gtk-theme;
+      name = "Tokyonight-Dark-B";
+      package = pkgs.tokyo-night-gtk-theme;
     };
 
     cursorTheme = {
