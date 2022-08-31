@@ -25,9 +25,9 @@
 	"./scripts/getBattery.sh capacity")
 (defpoll battery_icon :interval "1s"
 	"./scripts/getBattery.sh icon")
-(defpoll network_speed_down :interval "1s"
+(defpoll network_speed_down
 "./scripts/getNetworkTraffic.sh wlp3s0 down")
-(defpoll network_speed_up :interval "1s"
+(defpoll network_speed_up
 "./scripts/getNetworkTraffic.sh wlp3s0 up")
 
 ;; MUSIC PLAYER VARS
