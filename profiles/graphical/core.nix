@@ -17,7 +17,6 @@
     upower.enable = true;
     acpid.enable = true;
     devmon.enable = true;
-    mpd.enable = true;
 
 
     xserver = {

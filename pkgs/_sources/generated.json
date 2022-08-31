@@ -1,23 +1,4 @@
 {
-    "awesome-git": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "awesome-git",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "awesomeWM",
-            "repo": "awesome",
-            "rev": "f3cf88593c15a233092972c997528297e546f325",
-            "sha256": "sha256-U/+aLp4fHUTULk+EqP2vtzeVD5FDcUPH53owQ835G7k=",
-            "type": "github"
-        },
-        "version": "f3cf88593c15a233092972c997528297e546f325"
-    },
     "picom-arian8j2-git": {
         "cargoLocks": null,
         "extract": null,
