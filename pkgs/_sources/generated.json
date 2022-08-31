@@ -1,8 +1,8 @@
 {
-    "bspwm-rounded-corners": {
+    "bspwm-rounded": {
         "cargoLocks": null,
         "extract": null,
-        "name": "bspwm-rounded-corners",
+        "name": "bspwm-rounded",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -10,13 +10,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "j-james",
-            "repo": "bspwm-rounded-corners",
-            "rev": "00e85df0505d2bfbd41234d1daf2f03c461b6a2b",
-            "sha256": "sha256-Bw2Cju5bcFnHUSc4C85mc9Kyg2pt+X3H1bwQQKokszY=",
+            "owner": "phuhl",
+            "repo": "bspwm-rounded",
+            "rev": "a510c368595cd530713cc9d850842ba096051d12",
+            "sha256": "sha256-VyQoLiQ4yT43scFcCfBejr+SfGuJEZ6RI9Gf1kRGFV0=",
             "type": "github"
         },
-        "version": "00e85df0505d2bfbd41234d1daf2f03c461b6a2b"
+        "version": "a510c368595cd530713cc9d850842ba096051d12"
     },
     "picom-arian8j2-git": {
         "cargoLocks": null,
