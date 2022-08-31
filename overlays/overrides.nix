@@ -23,6 +23,8 @@ channels: final: prev: {
     libcanberra-gtk3
     pavucontrol
     trash-cli
+    spotify
+    spicetify-cli
     ;
 
   haskellPackages = prev.haskellPackages.override
