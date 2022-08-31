@@ -14,6 +14,6 @@
     cava
     spotify
     spicetify-cli
-    whatsapp-for-linux
+    chromium
   ];
 }

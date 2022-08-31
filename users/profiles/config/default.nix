@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-
   xdg = {
     enable = true;
     userDirs = {
@@ -13,6 +12,25 @@
 
     dataFile."fonts".source = ./fonts;
     dataFile."fonts".recursive = true;
+
+    desktopEntries = {
+      whatsapp = {
+        name = "WhatsApp";
+        genericName = "WhatsApp";
+        comment = "WhatsApp Desktop Webapp";
+        exec = "chromium --start-maximized --app=https://web.whatsapp.com";
+        type = "Application";
+        terminal = false;
+        startupNotify = true;
+        categories = [ "Network" ];
+        mimeType = [ "text/plain" ];
+        settings = {
+          Keywords = "WhatsApp;webapp;";
+          X-Ubuntu-Gettext-Domain = "WhatsApp";
+          StartupWMClass = "web.whatsapp.com";
+        };
+      };
+    };
   };
 
   home = {
@@ -50,6 +68,11 @@
     cursorTheme = {
       name = "volantes_cursors";
       package = pkgs.nur.repos.ambroisie.volantes-cursors;
+    };
+
+    iconTheme = {
+      name = "zafiro-icons";
+      package = pkgs.zafiro-icons;
     };
 
     gtk3.extraConfig = {
