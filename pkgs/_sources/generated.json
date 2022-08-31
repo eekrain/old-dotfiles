@@ -1,4 +1,23 @@
 {
+    "bspwm-rounded-corners": {
+        "cargoLocks": null,
+        "extract": null,
+        "name": "bspwm-rounded-corners",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "j-james",
+            "repo": "bspwm-rounded-corners",
+            "rev": "00e85df0505d2bfbd41234d1daf2f03c461b6a2b",
+            "sha256": "sha256-Bw2Cju5bcFnHUSc4C85mc9Kyg2pt+X3H1bwQQKokszY=",
+            "type": "github"
+        },
+        "version": "00e85df0505d2bfbd41234d1daf2f03c461b6a2b"
+    },
     "picom-arian8j2-git": {
         "cargoLocks": null,
         "extract": null,
