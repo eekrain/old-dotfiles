@@ -78,17 +78,6 @@
       # If you want to use JACK applications, uncomment this
       #jack.enable = true;
     };
-
-    mpd = {
-      enable = true;
-      extraConfig = ''
-        audio_output {
-          type "pipewire"
-          name "My PipeWire Output"
-        }
-      '';
-      user = "eekrain";
-    };
   };
   # Bluetooth audio settings for pipewire
   environment.etc = {
@@ -108,11 +97,6 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   systemd.services.upower.enable = true;
-
-  systemd.services.mpd.environment = {
-    # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/609
-    XDG_RUNTIME_DIR = "/run/user/1000"; # User-id 1000 must match above user. MPD will look inside this directory for the PipeWire socket.
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

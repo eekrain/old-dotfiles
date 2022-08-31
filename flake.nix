@@ -132,7 +132,6 @@
                 users.eekrain
                 graphical.core
                 graphical.driver
-                # graphical.awesome
                 graphical.bspwm
                 development
               ];
@@ -177,7 +176,6 @@
               base = [ git ];
               dev = [
                 config
-                # awesome
                 bspwm
                 programs
                 cli
