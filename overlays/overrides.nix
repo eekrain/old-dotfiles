@@ -25,6 +25,7 @@ channels: final: prev: {
     trash-cli
     spotify
     spicetify-cli
+    whatsapp-for-linux
     ;
 
   haskellPackages = prev.haskellPackages.override
