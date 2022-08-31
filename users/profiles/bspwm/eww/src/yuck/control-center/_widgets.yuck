@@ -85,6 +85,11 @@
 					(button :class "exit-btn" :onclick "sh ./scripts/openExitScreen.sh &" "")
 				)
 			)
+      (box :class "fourth-row" :orientation "h" :space-evenly "true"
+				(box :class "network-traffic" :orientation "h" :halign "center" :space-evenly "true"
+					(label :class "network-traffic-label" :halign "start" :text "Download: ${network_speed_down} | Upload: ${network_speed_up}")
+				)
+			)
 		)
 		(box :class "mp-separator" :style "margin-top: 1.5em;")
 		(revealer :class "mp-revealer" :reveal mp :transition "slideup" :duration "600ms"
