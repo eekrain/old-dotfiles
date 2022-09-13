@@ -10,6 +10,7 @@
       mpc-cli
       mpd
       mpdris2
+      iwgtk
     ];
   };
 
