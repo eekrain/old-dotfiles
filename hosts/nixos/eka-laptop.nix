@@ -64,6 +64,7 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp0s3.useDHCP = lib.mkDefault true;
   networking.networkmanager.enable = true;
+  networking.wireless.iwd.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;
