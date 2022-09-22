@@ -10,7 +10,6 @@
       mpc-cli
       mpd
       mpdris2
-      iwgtk
     ];
   };
 
@@ -19,4 +18,6 @@
       windowManager.bspwm.enable = true;
     };
   };
+
+  programs.nm-applet.enable = true;
 }
