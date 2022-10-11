@@ -40,7 +40,7 @@
       plugins = [
         { name = "zsh-users/zsh-history-substring-search"; }
         { name = "davidde/git"; tags = [ ''hook-load:"unalias gco gbd"'' ]; }
-        { name = "grimmbraten/gitgo"; }
+        # { name = "grimmbraten/gitgo"; }
         { name = "TwoPizza9621536/zsh-exa"; }
         { name = "aubreypwd/zsh-plugin-fd"; }
         { name = "skywind3000/z.lua"; }
