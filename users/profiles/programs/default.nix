@@ -14,6 +14,5 @@
     spotify
     spicetify-cli
     chromium
-    genymotion
   ];
 }
