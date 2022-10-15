@@ -8,6 +8,4 @@
   # Virtualization
   programs.adb.enable = true;
   virtualisation.libvirtd.enable = true;
-
-  services.flatpak.enable = true;
 }
