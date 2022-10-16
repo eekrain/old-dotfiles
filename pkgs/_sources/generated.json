@@ -1,6 +1,22 @@
 {
+    "my-bspwm-custom-fonts": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "my-bspwm-custom-fonts",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-J2xoO1hAnKkbRAMUKKuDJ85DBGRCHSIeDIiDD1+PSS8=",
+            "type": "url",
+            "url": "https://github.com/eekrain/dotfiles/releases/download/v1.0/my_bspwm_custom_fonts.tar.xz"
+        },
+        "version": "1.0"
+    },
     "picom-arian8j2-git": {
         "cargoLocks": null,
+        "date": "2022-09-29",
         "extract": null,
         "name": "picom-arian8j2-git",
         "passthru": null,
@@ -12,14 +28,15 @@
             "name": null,
             "owner": "Arian8j2",
             "repo": "picom",
-            "rev": "c2beb521240e0d4963cb4f165522c59985125e94",
-            "sha256": "sha256-nVHrFgStE8ya90npjtYBHTR5+uWYa65WY1Ot/KIxzRQ=",
+            "rev": "ce46b21a39ae79a727768514cb00e632cbfa9483",
+            "sha256": "sha256-3tjPGr84SGtM3HD+AttPSC4h6BfDiy1RGoRyigd7Hpw=",
             "type": "github"
         },
-        "version": "c2beb521240e0d4963cb4f165522c59985125e94"
+        "version": "ce46b21a39ae79a727768514cb00e632cbfa9483"
     },
     "picom-git": {
         "cargoLocks": null,
+        "date": "2022-10-10",
         "extract": null,
         "name": "picom-git",
         "passthru": null,
@@ -31,14 +48,15 @@
             "name": null,
             "owner": "yshui",
             "repo": "picom",
-            "rev": "e0758eb5e572d5d7cf28f28e5e409f20e0bd2ded",
-            "sha256": "sha256-L0cFkKPFw92dx3P9jlkwgw7/otjUVkVZbOE0UT6gF+I=",
+            "rev": "8a373c38a631e0344c38d3b19ab673aacfbaf1f5",
+            "sha256": "sha256-mKtop5/80YIAZqogshk5Tm9PR+93rLWSh8hqtNFjlPE=",
             "type": "github"
         },
-        "version": "e0758eb5e572d5d7cf28f28e5e409f20e0bd2ded"
+        "version": "8a373c38a631e0344c38d3b19ab673aacfbaf1f5"
     },
     "picom-jonaburg-git": {
         "cargoLocks": null,
+        "date": "2022-03-19",
         "extract": null,
         "name": "picom-jonaburg-git",
         "passthru": null,
@@ -58,6 +76,7 @@
     },
     "sf-pro": {
         "cargoLocks": null,
+        "date": "2021-06-22",
         "extract": null,
         "name": "sf-pro",
         "passthru": null,
@@ -75,27 +94,9 @@
         },
         "version": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58"
     },
-    "tokyo-night-gtk-theme": {
-        "cargoLocks": null,
-        "extract": null,
-        "name": "tokyo-night-gtk-theme",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "Fausto-Korpsvart",
-            "repo": "Tokyo-Night-GTK-Theme",
-            "rev": "6bbb8954b62cd6fb696f7811e7e8049f89c51393",
-            "sha256": "sha256-5dkkfCS9d9detnTn86WcCUQCgDFJ9NI/tyHg8jqxKOI=",
-            "type": "github"
-        },
-        "version": "6bbb8954b62cd6fb696f7811e7e8049f89c51393"
-    },
     "x11-emoji-picker": {
         "cargoLocks": null,
+        "date": "2022-03-10",
         "extract": null,
         "name": "x11-emoji-picker",
         "passthru": null,

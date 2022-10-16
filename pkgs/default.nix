@@ -3,6 +3,7 @@ final: prev: {
   sources = prev.callPackage (import ./_sources/generated.nix) { };
   # then, call packages with `final.callPackage`
   sf-pro = prev.callPackage ./fonts/sf-pro { };
+  my-bspwm-custom-fonts = prev.callPackage ./fonts/my-bspwm-custom-fonts { };
   x11-emoji-picker = prev.callPackage ./graphical/x11-emoji-picker { };
   tokyo-night-gtk-theme = prev.callPackage ./graphical/tokyo-night-gtk-theme { };
 }

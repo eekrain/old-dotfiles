@@ -20,4 +20,6 @@
   };
 
   programs.nm-applet.enable = true;
+
+  fonts.fonts = with pkgs; [ sf-pro my-bspwm-custom-fonts ];
 }

@@ -10,9 +10,6 @@
       };
     };
 
-    dataFile."fonts".source = ./fonts;
-    dataFile."fonts".recursive = true;
-
     desktopEntries = {
       whatsapp = {
         name = "WhatsApp";

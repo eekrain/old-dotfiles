@@ -100,7 +100,7 @@ in
   };
 
   fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts sf-pro nerdfonts ];
+  fonts.fonts = with pkgs; [ powerline-fonts dejavu_fonts nerdfonts ];
 
   nix = {
 
