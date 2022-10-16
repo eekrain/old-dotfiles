@@ -94,6 +94,26 @@
         },
         "version": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58"
     },
+    "tokyo-night-gtk-theme": {
+        "cargoLocks": null,
+        "date": "2022-10-12",
+        "extract": null,
+        "name": "tokyo-night-gtk-theme",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Fausto-Korpsvart",
+            "repo": "Tokyo-Night-GTK-Theme",
+            "rev": "517716f1da4520e9db37c7d86907c54f76dfb936",
+            "sha256": "sha256-fGjFKEOL9F1bFWRBKC1tJfDWIucRoU04YNHGuVlcrLQ=",
+            "type": "github"
+        },
+        "version": "517716f1da4520e9db37c7d86907c54f76dfb936"
+    },
     "x11-emoji-picker": {
         "cargoLocks": null,
         "date": "2022-03-10",

@@ -17,6 +17,9 @@ git.fetchSubmodules = true
 src.git = "https://github.com/Arian8j2/picom"
 fetch.github = "Arian8j2/picom"
 git.fetchSubmodules = true
+[tokyo-night-gtk-theme]
+src.git = "https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
+fetch.github = "Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
 [my-bspwm-custom-fonts]
 src.manual = "1.0"
 fetch.url = "https://github.com/eekrain/dotfiles/releases/download/v1.0/my_bspwm_custom_fonts.tar.xz"
