@@ -5,12 +5,19 @@ stdenv.mkDerivation
   # version will resolve to the latest available on gitub
   inherit (sources.my-bspwm-custom-fonts) pname version src;
 
-  unpackPhase = "true";
+  unpackPhase = ''
+    runHook preUnpack
+    mkdir ${pname}-${version}
+    tar -C ${pname}-${version} -xzf $src
+    runHook postUnpack
+  '';
 
   installPhase = ''
+    runHook preInstall
     mkdir -p $out/share/fonts/{truetype,opentype}
-    find . -name '*.otf' -exec install -Dt $out/share/fonts/opentype {} \;
-    find . -name '*.ttf' -exec install -Dt $out/share/fonts/truetype {} \;
+    find ${pname}-${version} -name '*.otf' -exec install -Dt $out/share/fonts/opentype {} \;
+    find ${pname}-${version} -name '*.ttf' -exec install -Dt $out/share/fonts/truetype {} \;
+    runHook postInstall
   '';
 
   meta = with lib; {
