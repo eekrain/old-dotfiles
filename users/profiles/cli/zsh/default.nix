@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  home.packages = with pkgs; [ awscli2 fnm ];
+  home.packages = with pkgs; [ awscli2 nodejs-16_x yarn ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
@@ -26,8 +26,6 @@
     '';
 
     initExtra = ''
-      eval "$(${pkgs.fnm}/bin/fnm env --use-on-cd)" 
-
       eval "$(${pkgs.starship}/bin/starship init zsh)"
       eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
 
