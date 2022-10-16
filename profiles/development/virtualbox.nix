@@ -8,4 +8,6 @@
   # Virtualization
   programs.adb.enable = true;
   virtualisation.libvirtd.enable = true;
+
+  systemPackages = with pkgs; [ genymotion ];
 }
