@@ -7,16 +7,16 @@ stdenv.mkDerivation
 
   unpackPhase = ''
     runHook preUnpack
-    mkdir ${pname}-${version}
-    tar -C ${pname}-${version} -xzf $src
+    mkdir ${sources.my-bspwm-custom-fonts.pname}
+    tar -C ${sources.my-bspwm-custom-fonts.pname} -xzf $src
     runHook postUnpack
   '';
 
   installPhase = ''
     runHook preInstall
     mkdir -p $out/share/fonts/{truetype,opentype}
-    find ${pname}-${version} -name '*.otf' -exec install -Dt $out/share/fonts/opentype {} \;
-    find ${pname}-${version} -name '*.ttf' -exec install -Dt $out/share/fonts/truetype {} \;
+    find ./${sources.my-bspwm-custom-fonts.pname} -name '*.otf' -exec install -Dt $out/share/fonts/opentype {} \;
+    find ./${sources.my-bspwm-custom-fonts.pname} -name '*.ttf' -exec install -Dt $out/share/fonts/truetype {} \;
     runHook postInstall
   '';
 
