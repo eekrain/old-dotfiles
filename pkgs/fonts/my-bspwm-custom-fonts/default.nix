@@ -21,7 +21,7 @@ stdenv.mkDerivation
   '';
 
   meta = with lib; {
-    description = "Bspwm custom fonts for github:eekrain/dotfiles";
+    description = "My bspwm custom fonts for github:eekrain/dotfiles";
     homepage = "https://github.com/eekrain/dotfiles";
     license = licenses.unfree;
     platforms = platforms.all;

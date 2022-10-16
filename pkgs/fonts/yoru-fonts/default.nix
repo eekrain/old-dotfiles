@@ -12,7 +12,7 @@ stdenv.mkDerivation
   '';
 
   meta = with lib; {
-    description = "San Francisco Pro fonts by Apple";
+    description = "Yoru config fonts";
     homepage = "https://developer.apple.com/fonts/";
     license = licenses.unfree;
     platforms = platforms.all;
