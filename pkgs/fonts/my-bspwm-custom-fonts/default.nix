@@ -8,7 +8,7 @@ stdenv.mkDerivation
   unpackPhase = ''
     runHook preUnpack
     mkdir ${sources.my-bspwm-custom-fonts.pname}
-    tar -C ${sources.my-bspwm-custom-fonts.pname} -xf $src
+    tar -C ${sources.my-bspwm-custom-fonts.pname} -xzf $src
     runHook postUnpack
   '';
 

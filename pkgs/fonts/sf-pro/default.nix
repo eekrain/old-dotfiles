@@ -7,8 +7,8 @@ stdenv.mkDerivation
 
   installPhase = ''
     mkdir -p $out/share/fonts/{truetype,opentype}
-    find . -name '*.otf' -exec install -Dt $out/share/fonts/opentype {} \;
-    find . -name '*.ttf' -exec install -Dt $out/share/fonts/truetype {} \;
+    cp *.ttf $out/share/fonts/truetype/
+    cp *.otf $out/share/fonts/opentype/
   '';
 
   meta = with lib; {
