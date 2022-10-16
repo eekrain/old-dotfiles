@@ -6,6 +6,3 @@ Nix allows for easy to manage, collaborative, reproducible deployments. This mea
 
 
 This flake is configured with the use of [digga][digga].
-
-[digga]: https://github.com/divnix/digga
-# nixos-digga-test
