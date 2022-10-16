@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
@@ -9,5 +9,5 @@
   programs.adb.enable = true;
   virtualisation.libvirtd.enable = true;
 
-  systemPackages = with pkgs; [ genymotion ];
+  environment.systemPackages = with pkgs; [ genymotion ];
 }
