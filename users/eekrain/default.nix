@@ -7,7 +7,7 @@
     password = "eka";
     description = "eekrain";
     isNormalUser = true;
-    extraGroups = [ "wheel" "vboxsf" "adbusers" "libvirtd" "networkmanager" ];
+    extraGroups = [ "wheel" "vboxsf" "adbusers" "libvirtd" "networkmanager" "docker" ];
     shell = pkgs.zsh;
   };
 }
