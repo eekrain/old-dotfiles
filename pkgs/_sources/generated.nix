@@ -9,6 +9,14 @@
       sha256 = "sha256-J2xoO1hAnKkbRAMUKKuDJ85DBGRCHSIeDIiDD1+PSS8=";
     };
   };
+  nhost-cli = {
+    pname = "nhost-cli";
+    version = "v0.8.4";
+    src = fetchurl {
+      url = "https://github.com/nhost/cli/releases/download/v0.8.4/cli-v0.8.4-linux-amd64.tar.gz";
+      sha256 = "sha256-mwK1jtvd/vhCfxw2ctGqN/sLUSHgvtR+fvh0TzJjVGQ=";
+    };
+  };
   picom-arian8j2-git = {
     pname = "picom-arian8j2-git";
     version = "ce46b21a39ae79a727768514cb00e632cbfa9483";

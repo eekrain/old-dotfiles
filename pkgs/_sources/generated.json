@@ -14,6 +14,21 @@
         },
         "version": "1.0"
     },
+    "nhost-cli": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "nhost-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-mwK1jtvd/vhCfxw2ctGqN/sLUSHgvtR+fvh0TzJjVGQ=",
+            "type": "url",
+            "url": "https://github.com/nhost/cli/releases/download/v0.8.4/cli-v0.8.4-linux-amd64.tar.gz"
+        },
+        "version": "v0.8.4"
+    },
     "picom-arian8j2-git": {
         "cargoLocks": null,
         "date": "2022-09-29",

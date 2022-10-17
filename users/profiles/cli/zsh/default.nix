@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  home.packages = with pkgs; [ awscli2 nodejs-16_x yarn ];
+  home.packages = with pkgs; [ awscli2 nodejs-16_x yarn nhost-cli ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
