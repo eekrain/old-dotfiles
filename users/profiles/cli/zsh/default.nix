@@ -19,6 +19,7 @@
       update = "sudo nixos-rebuild switch";
       b-hist = "python ${config.xdg.configHome}/zsh/zhist_bkp/index.py -b -p $HOME/.zsh_history";
       r-hist = "python ${config.xdg.configHome}/zsh/zhist_bkp/index.py -r -p $HOME/.zsh_history";
+      kill-gradle = "pkill -f '.*GradleDaemon.*'";
     };
 
     loginExtra = ''
