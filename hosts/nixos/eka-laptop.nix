@@ -17,45 +17,51 @@
   };
 
   # Bootloader.
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
+  boot = {
+    supportedFilesystems = [ "ntfs" ];
 
-    grub = {
-      enable = true;
-      version = 2;
-      efiSupport = true;
-      devices = [ "nodev" ];
-      useOSProber = true;
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+
+      grub = {
+        enable = true;
+        version = 2;
+        efiSupport = true;
+        devices = [ "nodev" ];
+        useOSProber = true;
+      };
     };
   };
 
+  fileSystems."/" = {
+    device = "/dev/disk/by-label/root";
+    fsType = "ext4";
+  };
 
-  fileSystems."/" =
-    {
-      device = "/dev/disk/by-label/root";
-      fsType = "ext4";
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-partlabel/boot";
+    fsType = "vfat";
+  };
 
-  fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-partlabel/boot";
-      fsType = "vfat";
-    };
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-label/nix-store";
+    fsType = "ext4";
+  };
 
-  fileSystems."/nix" =
-    {
-      device = "/dev/disk/by-label/nix-store";
-      fsType = "ext4";
-    };
+  fileSystems."/home" = {
+    device = "/dev/disk/by-label/home";
+    fsType = "ext4";
+  };
 
-  fileSystems."/home" =
-    {
-      device = "/dev/disk/by-label/home";
-      fsType = "ext4";
-    };
+  fileSystems."/home/eekrain/External" = {
+    device = "/dev/sdb1";
+    fsType = "ntfs3";
+    options = [ "rw" "uid=1000" ];
+  };
+
 
   swapDevices =
     [{ device = "/dev/disk/by-label/swap"; }];
