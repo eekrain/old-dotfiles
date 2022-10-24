@@ -57,7 +57,7 @@
   };
 
   fileSystems."/home/eekrain/External" = {
-    device = "/dev/sdb1";
+    device = "/dev/disk/by-label/ntfs";
     fsType = "ntfs3";
     options = [ "rw" "uid=1000" ];
   };
