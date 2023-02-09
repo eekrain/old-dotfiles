@@ -70,6 +70,12 @@
   networking.useDHCP = lib.mkDefault true;
   networking.networkmanager.enable = true;
 
+  networking.extraHosts =
+    ''
+      127.0.0.1 local.mydomain.com
+    '';
+
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
