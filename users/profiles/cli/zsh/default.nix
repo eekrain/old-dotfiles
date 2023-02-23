@@ -71,6 +71,7 @@ in
           Schroefdop/git-branches\
           TwoPizza9621536/zsh-exa\
           aubreypwd/zsh-plugin-fd\
+          marlonrichert/zsh-autocomplete\
         atinit'zpcompinit; zpcdreplay'\
           zdharma/fast-syntax-highlighting
 
@@ -79,8 +80,5 @@ in
       
       macchina
     '';
-
-    #     { name = "marlonrichert/zsh-autocomplete"; }
-
   };
 }
