@@ -14,5 +14,6 @@
     spotify
     spicetify-cli
     chromium
+    ferdium
   ];
 }
