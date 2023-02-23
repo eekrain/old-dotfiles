@@ -38,65 +38,49 @@ in
     completionInit = ''
       autoload -Uz _zinit
       (( ''${${text}} )) && _comps[zinit]=_zinit
+      autoload bashcompinit && bashcompinit
+      autoload -Uz compinit && compinit
     '';
 
 
     initExtra = ''
-      # z
-      zinit ice wait blockf lucid
-      zinit light skywind3000/z.lua
-
-      # z tab completion
-      zinit ice wait lucid
-      zinit light changyuheng/fz
-
-      # z / fzf (ctrl-g)
-      zinit ice wait lucid
-      zinit light andrewferrier/fzf-z
-
-      # cd
-      zinit ice wait lucid
-      zinit light changyuheng/zsh-interactive-cd
-
-      # Don't bind these keys until ready
       bindkey -r '^[[A'
       bindkey -r '^[[B'
       function __bind_history_keys() {
         bindkey '^[[A' history-substring-search-up
         bindkey '^[[B' history-substring-search-down
       }
-      # History substring searching
-      zinit ice wait lucid atload'__bind_history_keys'
-      zinit light zsh-users/zsh-history-substring-search
-
-      # autosuggestions, trigger precmd hook upon load
-      zinit ice wait lucid atload'_zsh_autosuggest_start'
-      zinit light zsh-users/zsh-autosuggestions
       export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
 
+      zinit light eekrain/zsh-aws
+
+      zinit wait lucid light-mode for \
+        blockf\
+          skywind3000/z.lua\
+          changyuheng/fz\
+          andrewferrier/fzf-z\
+          changyuheng/zsh-interactive-cd\
+        atload'__bind_history_keys'\
+          zsh-users/zsh-history-substring-search\
+        atload'_zsh_autosuggest_start'\
+          zsh-users/zsh-autosuggestions\
+        blockf atpull'zinit creinstall -q .'\
+          zsh-users/zsh-completions\
+        atload'unalias gco gbd gm'\
+          davidde/git\
+          Schroefdop/git-branches\
+          TwoPizza9621536/zsh-exa\
+          aubreypwd/zsh-plugin-fd\
+        atinit'zpcompinit; zpcdreplay'\
+          zdharma/fast-syntax-highlighting
 
       eval "$(${pkgs.starship}/bin/starship init zsh)"
       eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
       
-      macchina 
+      macchina
     '';
 
-
-    # zplug = {
-    #   enable = true;
-    #   plugins = [
-    #     { name = "zsh-users/zsh-history-substring-search"; }
-    #     { name = "davidde/git"; tags = [ ''hook-load:"unalias gco gbd"'' ]; }
-    #     # { name = "grimmbraten/gitgo"; }
-    #     { name = "TwoPizza9621536/zsh-exa"; }
-    #     { name = "aubreypwd/zsh-plugin-fd"; }
-    #     { name = "skywind3000/z.lua"; }
     #     { name = "marlonrichert/zsh-autocomplete"; }
-    #     { name = "eekrain/zsh-aws"; tags = [ defer:2 ]; }
-    #     { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; }
-    #     { name = "z-shell/F-Sy-H"; tags = [ defer:3 ]; }
-    #   ];
-    # };
 
   };
 }
