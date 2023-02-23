@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
+let
+  text = "+_comps";
+in
 {
-  home.packages = with pkgs; [ awscli2 nodejs-16_x yarn nhost-cli ];
+  home.packages = with pkgs; [ zinit awscli2 nodejs-16_x yarn nhost-cli ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 
@@ -26,31 +29,56 @@
       python ${config.xdg.configHome}/zsh/zhist_bkp/index.py -b -p $HOME/.zsh_history
     '';
 
-    initExtra = ''
-      eval "$(${pkgs.starship}/bin/starship init zsh)"
-      eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
-
-      bindkey '^[[A' history-substring-search-up
-      bindkey '^[[B' history-substring-search-down
-
-      macchina 
+    initExtraBeforeCompInit = ''
+      export ZINIT_HOME="${pkgs.zinit}/share/zinit"
+      source "''${ZINIT_HOME}/zinit.zsh"
     '';
 
-    zplug = {
-      enable = true;
-      plugins = [
-        { name = "zsh-users/zsh-history-substring-search"; }
-        { name = "davidde/git"; tags = [ ''hook-load:"unalias gco gbd"'' ]; }
-        # { name = "grimmbraten/gitgo"; }
-        { name = "TwoPizza9621536/zsh-exa"; }
-        { name = "aubreypwd/zsh-plugin-fd"; }
-        { name = "skywind3000/z.lua"; }
-        { name = "marlonrichert/zsh-autocomplete"; }
-        { name = "eekrain/zsh-aws"; tags = [ defer:2 ]; }
-        { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; }
-        { name = "z-shell/F-Sy-H"; tags = [ defer:3 ]; }
-      ];
-    };
+    # Enable Zi completions
+    completionInit = ''
+      autoload -Uz _zinit
+      (( ''${${text}} )) && _comps[zinit]=_zinit
+      autoload bashcompinit && bashcompinit
+      autoload -Uz compinit && compinit
+    '';
 
+
+    initExtra = ''
+      bindkey -r '^[[A'
+      bindkey -r '^[[B'
+      function __bind_history_keys() {
+        bindkey '^[[A' history-substring-search-up
+        bindkey '^[[B' history-substring-search-down
+      }
+      export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
+
+      zinit light eekrain/zsh-aws
+
+      zinit wait lucid light-mode for \
+        blockf\
+          skywind3000/z.lua\
+          changyuheng/fz\
+          andrewferrier/fzf-z\
+          changyuheng/zsh-interactive-cd\
+        atload'__bind_history_keys'\
+          zsh-users/zsh-history-substring-search\
+        atload'_zsh_autosuggest_start'\
+          zsh-users/zsh-autosuggestions\
+        blockf atpull'zinit creinstall -q .'\
+          zsh-users/zsh-completions\
+        atload'unalias gco gbd gm'\
+          davidde/git\
+          Schroefdop/git-branches\
+          TwoPizza9621536/zsh-exa\
+          aubreypwd/zsh-plugin-fd\
+          marlonrichert/zsh-autocomplete\
+        atinit'zpcompinit; zpcdreplay'\
+          zdharma/fast-syntax-highlighting
+
+      eval "$(${pkgs.starship}/bin/starship init zsh)"
+      eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
+      
+      macchina
+    '';
   };
 }

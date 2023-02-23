@@ -27,6 +27,8 @@ channels: final: prev: {
     spicetify-cli
     whatsapp-for-linux
     bspwm
+    ferdium
+    zinit
     ;
 
   haskellPackages = prev.haskellPackages.override
