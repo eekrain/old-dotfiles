@@ -28,6 +28,7 @@ channels: final: prev: {
     whatsapp-for-linux
     bspwm
     ferdium
+    zinit
     ;
 
   haskellPackages = prev.haskellPackages.override
