@@ -36,8 +36,7 @@ pkill dunst &
 eww open bar &
 picom --config $HOME/.config/picom/picom.conf &
 dunst --config $HOME/.config/dunst/dunstrc &
-discord &
-chromium --start-maximized --app=https://web.whatsapp.com &
+ferdium &
 
 # Start polkit agent.
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -75,6 +74,7 @@ rule Code                           desktop=2
 rule Steam                          desktop=4
 rule discord                        desktop=5 follow=off
 rule Chromium-browser               desktop=5 follow=off
+rule Ferdium               desktop=5 follow=off
 
 rule Viewnior                       state=floating
 rule mpv                            state=fullscreen follow=on
