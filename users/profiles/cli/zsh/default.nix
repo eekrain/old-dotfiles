@@ -52,8 +52,6 @@ in
       }
       export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=10
 
-      zinit light eekrain/zsh-aws
-
       zinit wait lucid light-mode for \
         blockf\
           skywind3000/z.lua\
@@ -71,6 +69,8 @@ in
           Schroefdop/git-branches\
           TwoPizza9621536/zsh-exa\
           aubreypwd/zsh-plugin-fd\
+        atinit'SHOW_AWS_PROMPT=false'\
+          eekrain/zsh-aws\
         atinit'zpcompinit; zpcdreplay'\
           zdharma/fast-syntax-highlighting
 
