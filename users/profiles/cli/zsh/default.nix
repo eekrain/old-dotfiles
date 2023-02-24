@@ -54,7 +54,7 @@ in
 
       zinit wait lucid light-mode for \
         blockf\
-          skywind3000/z.lua\
+          rupa/z\
           changyuheng/fz\
           andrewferrier/fzf-z\
           changyuheng/zsh-interactive-cd\
