@@ -1,7 +1,8 @@
-colors/*
-!colors/default_theme.lua
-plugin
-docs
-lua/user
-lua/packer_compiled.lua
-ginit.vim
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data

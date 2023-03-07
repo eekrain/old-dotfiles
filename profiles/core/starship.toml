@@ -37,6 +37,12 @@ right_format = """$all"""
 [character]
 disabled = true
 
+[nix_shell]
+disabled = true
+
+[package]
+disabled = true
+
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
 [username]
@@ -119,9 +125,6 @@ symbol = ""
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 version_format = 'v${major}'
-
-[nix_shell]
-disabled = true
 
 [nim]
 symbol = " "

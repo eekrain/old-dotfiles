@@ -102,6 +102,5 @@ config gapless_monocle              true
 
 # Fix windows being below bar
 xdo lower -N eww-bar
-amixer sset 'Master' 50%
-$HOME/.config/sxhkd/scripts/touchpadToggle.sh
+xinput disable "FTE1200:00 0B05:0201 Touchpad"
 
