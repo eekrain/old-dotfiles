@@ -82,9 +82,7 @@
   };
 
   # Hardware Spesific
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   systemd.services.upower.enable = true;
