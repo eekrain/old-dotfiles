@@ -120,6 +120,7 @@
             /* set host-specific properties here */
             NixOS = { };
             eka-laptop = { };
+            example = { };
           };
           importables = rec {
             profiles = digga.lib.rakeLeaves ./profiles // {
