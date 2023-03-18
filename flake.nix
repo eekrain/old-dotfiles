@@ -134,8 +134,8 @@
                 graphical.core
                 graphical.driver
                 graphical.bspwm
-                development
               ];
+              mainWorkstation = base ++ [ virtualbox ];
             };
           };
         };
