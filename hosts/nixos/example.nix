@@ -21,6 +21,14 @@
 
   swapDevices = [{ device = "/dev/disk/by-label/swap"; }];
 
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+  };
+
+
+
+
   # Bootloader.
   boot.loader = {
     grub = {
