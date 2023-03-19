@@ -14,7 +14,8 @@
   };
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/b1f15aed-8120-4c4f-9683-669cb866ce0b";
+    {
+      device = "/dev/disk/by-uuid/b1f15aed-8120-4c4f-9683-669cb866ce0b";
       fsType = "ext4";
     };
 
@@ -68,7 +69,12 @@
   };
 
   # Hardware Spesific
-  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
+  powerManagement = {
+    enable = true;
+    cpuFreqGovernor = lib.mkDefault "ondemand";
+    cpufreq.min = 400000;
+    cpufreq.max = 2267000;
+  };
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   systemd.services.upower.enable = true;
