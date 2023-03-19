@@ -13,6 +13,14 @@
     extraModulePackages = [ ];
   };
 
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/b1f15aed-8120-4c4f-9683-669cb866ce0b";
+      fsType = "ext4";
+    };
+
+  swapDevices = [ ];
+
+
   # Bootloader.
   boot.loader = {
     grub = {
