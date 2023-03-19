@@ -132,10 +132,9 @@
                 users.root
                 users.eekrain
                 graphical.core
-                graphical.driver
                 graphical.bspwm
               ];
-              mainWorkstation = base ++ [ virtualbox ];
+              mainWorkstation = base ++ [ virtualbox graphical.driver];
             };
           };
         };

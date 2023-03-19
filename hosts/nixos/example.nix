@@ -14,36 +14,14 @@
   };
 
   # Bootloader.
-  boot = {
-    supportedFilesystems = [ "ntfs" ];
-
-    loader = {
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot";
-      };
-
-      grub = {
-        enable = true;
-        version = 2;
-        efiSupport = true;
-        devices = [ "nodev" ];
-        useOSProber = true;
-      };
+  boot.loader = {
+    grub = {
+      enable = true;
+      version = 2;
+      useOSProber = true;
+      device = "/dev/sda";
     };
   };
-
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/24312f16-b7c6-49ff-918c-f2fbd9d7c60f";
-      fsType = "ext4";
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2212-835F";
-      fsType = "vfat";
-    };
-
-  swapDevices = [ ];
 
   # Networking
   networking.useDHCP = lib.mkDefault true;
