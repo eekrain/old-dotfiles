@@ -2,6 +2,7 @@
 {
   imports = [
     ./browser.nix
+    ./spotify.nix
     ./neovim
   ];
 
@@ -11,8 +12,6 @@
     winbox
     mpv
     cava
-    spotify
-    spicetify-cli
     ferdium
   ];
 }
