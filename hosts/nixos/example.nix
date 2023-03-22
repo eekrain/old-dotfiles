@@ -1,7 +1,7 @@
 { suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
-  imports = [ suites.mysql suites.base ];
+  imports = suites.base;
 
   # Kernel
   boot = {

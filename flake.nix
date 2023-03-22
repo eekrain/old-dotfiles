@@ -128,13 +128,13 @@
             };
             suites = with profiles; rec {
               base = [
+                mysql
                 core.nixos
                 users.root
                 users.eekrain
                 graphical.core
                 graphical.bspwm
               ];
-              mysql = [ mysql ];
               mainWorkstation = base ++ [ virtualbox graphical.driver ];
             };
           };
