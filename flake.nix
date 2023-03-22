@@ -134,7 +134,8 @@
                 graphical.core
                 graphical.bspwm
               ];
-              mainWorkstation = base ++ [ virtualbox graphical.driver];
+              mysql = [ mysql ];
+              mainWorkstation = base ++ [ virtualbox graphical.driver ];
             };
           };
         };
