@@ -46,7 +46,8 @@
 
   networking.extraHosts =
     ''
-      127.0.0.1 local.mydomain.com
+      127.0.0.1 mydomain.com
+      127.0.0.1 dashboard.mydomain.com
     '';
 
 
