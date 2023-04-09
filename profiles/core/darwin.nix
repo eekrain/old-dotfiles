@@ -1,9 +1,8 @@
-{
-  self,
-  config,
-  lib,
-  pkgs,
-  ...
+{ self
+, config
+, lib
+, pkgs
+, ...
 }: {
   imports = [
     ./common.nix
@@ -46,7 +45,7 @@
     useSandbox = true;
 
     # Give special Nix privileges.
-    trustedUsers = ["root" "@wheel" "@admin"];
+    trustedUsers = [ "root" "@wheel" "@admin" ];
   };
 
   programs.bash = {
