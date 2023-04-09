@@ -1,0 +1,152 @@
+{
+    "my-bspwm-custom-fonts": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "my-bspwm-custom-fonts",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-J2xoO1hAnKkbRAMUKKuDJ85DBGRCHSIeDIiDD1+PSS8=",
+            "type": "url",
+            "url": "https://github.com/eekrain/dotfiles/releases/download/v1.0/my_bspwm_custom_fonts.tar.xz"
+        },
+        "version": "1.0"
+    },
+    "nhost-cli": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "nhost-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-mwK1jtvd/vhCfxw2ctGqN/sLUSHgvtR+fvh0TzJjVGQ=",
+            "type": "url",
+            "url": "https://github.com/nhost/cli/releases/download/v0.8.4/cli-v0.8.4-linux-amd64.tar.gz"
+        },
+        "version": "v0.8.4"
+    },
+    "picom-arian8j2-git": {
+        "cargoLocks": null,
+        "date": "2022-09-29",
+        "extract": null,
+        "name": "picom-arian8j2-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Arian8j2",
+            "repo": "picom",
+            "rev": "ce46b21a39ae79a727768514cb00e632cbfa9483",
+            "sha256": "sha256-3tjPGr84SGtM3HD+AttPSC4h6BfDiy1RGoRyigd7Hpw=",
+            "type": "github"
+        },
+        "version": "ce46b21a39ae79a727768514cb00e632cbfa9483"
+    },
+    "picom-git": {
+        "cargoLocks": null,
+        "date": "2022-10-10",
+        "extract": null,
+        "name": "picom-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yshui",
+            "repo": "picom",
+            "rev": "8a373c38a631e0344c38d3b19ab673aacfbaf1f5",
+            "sha256": "sha256-mKtop5/80YIAZqogshk5Tm9PR+93rLWSh8hqtNFjlPE=",
+            "type": "github"
+        },
+        "version": "8a373c38a631e0344c38d3b19ab673aacfbaf1f5"
+    },
+    "picom-jonaburg-git": {
+        "cargoLocks": null,
+        "date": "2022-03-19",
+        "extract": null,
+        "name": "picom-jonaburg-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jonaburg",
+            "repo": "picom",
+            "rev": "e3c19cd7d1108d114552267f302548c113278d45",
+            "sha256": "sha256-4voCAYd0fzJHQjJo4x3RoWz5l3JJbRvgIXn1Kg6nz6Y=",
+            "type": "github"
+        },
+        "version": "e3c19cd7d1108d114552267f302548c113278d45"
+    },
+    "sf-pro": {
+        "cargoLocks": null,
+        "date": "2021-06-22",
+        "extract": null,
+        "name": "sf-pro",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sahibjotsaggu",
+            "repo": "San-Francisco-Pro-Fonts",
+            "rev": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58",
+            "sha256": "sha256-mAXExj8n8gFHq19HfGy4UOJYKVGPYgarGd/04kUIqX4=",
+            "type": "github"
+        },
+        "version": "8bfea09aa6f1139479f80358b2e1e5c6dc991a58"
+    },
+    "tokyo-night-gtk-theme": {
+        "cargoLocks": null,
+        "date": "2022-10-12",
+        "extract": null,
+        "name": "tokyo-night-gtk-theme",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Fausto-Korpsvart",
+            "repo": "Tokyo-Night-GTK-Theme",
+            "rev": "517716f1da4520e9db37c7d86907c54f76dfb936",
+            "sha256": "sha256-fGjFKEOL9F1bFWRBKC1tJfDWIucRoU04YNHGuVlcrLQ=",
+            "type": "github"
+        },
+        "version": "517716f1da4520e9db37c7d86907c54f76dfb936"
+    },
+    "x11-emoji-picker": {
+        "cargoLocks": null,
+        "date": "2022-03-10",
+        "extract": null,
+        "name": "x11-emoji-picker",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "GaZaTu",
+            "repo": "x11-emoji-picker",
+            "rev": "7650a30914fc4fe0ca332d7674f9206bef408e4e",
+            "sha256": "sha256-GqQvjUegQqqhVx5gujO3eDw8w5ib0hrEI7XbHS8Aa3U=",
+            "type": "github"
+        },
+        "version": "7650a30914fc4fe0ca332d7674f9206bef408e4e"
+    }
+}
