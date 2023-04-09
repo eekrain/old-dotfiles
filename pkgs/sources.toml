@@ -1,4 +1,28 @@
 # nvfetcher.toml
-[manix]
-src.git = "https://github.com/mlvzk/manix"
-fetch.github = "mlvzk/manix"
+[sf-pro]
+src.git = "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts"
+fetch.github = "sahibjotsaggu/San-Francisco-Pro-Fonts"
+[x11-emoji-picker]
+src.git = "https://github.com/GaZaTu/x11-emoji-picker"
+fetch.github = "GaZaTu/x11-emoji-picker"
+[picom-git]
+src.git = "https://github.com/yshui/picom"
+fetch.github = "yshui/picom"
+git.fetchSubmodules = true
+[picom-jonaburg-git]
+src.git = "https://github.com/jonaburg/picom"
+fetch.github = "jonaburg/picom"
+git.fetchSubmodules = true
+[picom-arian8j2-git]
+src.git = "https://github.com/Arian8j2/picom"
+fetch.github = "Arian8j2/picom"
+git.fetchSubmodules = true
+[tokyo-night-gtk-theme]
+src.git = "https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
+fetch.github = "Fausto-Korpsvart/Tokyo-Night-GTK-Theme"
+[my-bspwm-custom-fonts]
+src.manual = "1.0"
+fetch.url = "https://github.com/eekrain/dotfiles/releases/download/v1.0/my_bspwm_custom_fonts.tar.xz"
+[nhost-cli]
+src.manual = "v0.8.4"
+fetch.url = "https://github.com/nhost/cli/releases/download/v0.8.4/cli-v0.8.4-linux-amd64.tar.gz"

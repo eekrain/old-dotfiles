@@ -28,6 +28,7 @@ channels: final: prev: {
     bspwm
     ferdium
     zinit
+    tzdata
     ;
 
   haskellPackages =
