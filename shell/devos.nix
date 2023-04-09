@@ -12,7 +12,6 @@
     cachix
     editorconfig-checker
     nixUnstable
-    nodePackages
     shfmt
     treefmt
     nvfetcher-bin
@@ -27,7 +26,6 @@ in {
 
   packages = [
     alejandra
-    nodePackages.prettier
     shfmt
     editorconfig-checker
   ];
