@@ -29,6 +29,7 @@ channels: final: prev: {
     ferdium
     zinit
     tzdata
+    python310Packages.eventlet
     ;
 
   haskellPackages =
