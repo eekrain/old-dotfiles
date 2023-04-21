@@ -1,10 +1,10 @@
-{
-  pkgs,
-  extraModulesPath,
-  inputs,
-  lib,
-  ...
-}: let
+{ pkgs
+, extraModulesPath
+, inputs
+, lib
+, ...
+}:
+let
   inherit
     (pkgs)
     agenix
@@ -19,11 +19,11 @@
     nixos-generators
     ;
 
-  pkgWithCategory = category: package: {inherit package category;};
+  pkgWithCategory = category: package: { inherit package category; };
   devos = pkgWithCategory "devos";
   formatter = pkgWithCategory "linter";
-in {
-  imports = ["${extraModulesPath}/git/hooks.nix" ./hooks];
+in
+{
 
   packages = [
     alejandra
