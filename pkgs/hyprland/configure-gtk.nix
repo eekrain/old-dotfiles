@@ -13,4 +13,4 @@ pkgs.writeTextFile {
       gnome_schema=org.gnome.desktop.interface
       gesettings set $gnome_schema gtk-theme 'Adwaita'
     '';
-};
+}

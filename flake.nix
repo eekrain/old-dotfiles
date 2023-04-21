@@ -52,6 +52,8 @@
     nvfetcher.inputs.nixpkgs.follows = "nixos";
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
+
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs =
@@ -65,6 +67,7 @@
     , nvfetcher
     , deploy
     , nixpkgs
+    , hyprland
     , ...
     } @ inputs:
     digga.lib.mkFlake
@@ -121,6 +124,7 @@
               digga.nixosModules.nixConfig
               home.nixosModules.home-manager
               agenix.nixosModules.age
+              hyprland.nixosModules.default
             ];
           };
 
@@ -186,16 +190,14 @@
           importables = rec {
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
-              suites = with profiles; rec {
-                base = [
-                  config
-                  programs
-                  cli
-                ];
-                hyprland = base ++ [
-                  hyprland
-                ];
-              };
+              base = [
+                config
+                programs
+                cli
+              ];
+              hyprland = base ++ [
+                hyprland
+              ];
             };
           };
           users = {
