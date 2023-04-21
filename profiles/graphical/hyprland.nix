@@ -1,12 +1,13 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: let
+{ config
+, pkgs
+, lib
+, ...
+}:
+let
   user = import ../../user/username.nix;
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in {
+in
+{
   environment.systemPackages = with pkgs; [
     dbus-hyprland-environment
     configure-gtk
@@ -19,13 +20,16 @@ in {
     wlr-randr
     gnome.nautilus
     swaybg
+
+    waybar
+    mako
   ];
 
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     gtkUsePortal = true;
   };
 
