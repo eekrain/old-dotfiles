@@ -1,7 +1,6 @@
-{
-  config,
-  pkgs,
-  ...
+{ config
+, pkgs
+, ...
 }: {
   xdg = {
     enable = true;
@@ -23,8 +22,8 @@
         icon = "whatsapp";
         terminal = false;
         startupNotify = true;
-        categories = ["Network"];
-        mimeType = ["text/plain"];
+        categories = [ "Network" ];
+        mimeType = [ "text/plain" ];
         settings = {
           Keywords = "WhatsApp;webapp;";
           X-Ubuntu-Gettext-Domain = "WhatsApp";
@@ -60,13 +59,6 @@
 
   gtk = {
     enable = true;
-
-    theme = {
-      # name = "Numix";
-      # package = pkgs.numix-gtk-theme;
-      name = "Tokyonight-Dark-B";
-      package = pkgs.tokyo-night-gtk-theme;
-    };
 
     cursorTheme = {
       name = "volantes_cursors";

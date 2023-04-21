@@ -1,11 +1,12 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{ config
+, pkgs
+, ...
+}:
+let
   text = "+_comps";
-in {
-  home.packages = with pkgs; [zinit awscli2 nodejs-16_x yarn nhost-cli];
+in
+{
+  home.packages = with pkgs; [ zinit awscli2 nodejs-16_x yarn ];
 
   xdg.configFile."zsh/zhist_bkp".source = ./zhist_bkp;
 

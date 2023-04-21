@@ -189,14 +189,14 @@
           modules = [ ];
           importables = rec {
             profiles = digga.lib.rakeLeaves ./users/profiles;
-            suites = with profiles; rec {
+            suites = rec {
               base = [
-                config
-                programs
-                cli
+                profiles.config
+                profiles.programs
+                profiles.cli
               ];
               hyprland = base ++ [
-                hyprland
+                profiles.hyprland
               ];
             };
           };

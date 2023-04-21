@@ -21,8 +21,6 @@
       icu
       xdo
       xdotool
-      libsForQt5.qt5.qtgraphicaleffects
-      x11-emoji-picker
     ];
 
     shellAliases =
@@ -59,17 +57,12 @@
       sandbox = true;
 
       # Improve nix store disk usage
-      autoOptimiseStore = true;
-      optimise.automatic = true;
+      auto-optimise-store = true;
 
       # Give root user and wheel group special Nix privileges.
       trusted-users = [ "root" "@wheel" ];
       allowed-users = [ "@wheel" ];
     };
-
-    # Improve nix store disk usage
-    settings.auto-optimise-store = true;
-    optimise.automatic = true;
   };
 
   programs.bash = {
@@ -92,13 +85,6 @@
 
   # Service that makes Out of Memory Killer more effective
   services.earlyoom.enable = true;
-
-  qt5 = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita";
-  };
-
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";

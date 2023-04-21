@@ -1,7 +1,7 @@
 { suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
-  imports = suites.mainWorkstation;
+  imports = suites.base;
 
   # Kernel
   boot = {
