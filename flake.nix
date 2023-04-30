@@ -175,12 +175,13 @@
           importables = rec {
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
-              base = [ git ];
-              dev = [
+              base = [ cli ];
+              with-bspwm = [
                 config
                 bspwm
                 programs
                 cli
+                monitor
               ];
             };
           };
@@ -201,7 +202,7 @@
             # appropriate. after all, configuring these hm users is one of the
             # first steps in customizing the template.
             darwin = { suites, ... }: { imports = suites.base; };
-            eekrain = { suites, ... }: { imports = suites.dev; };
+            eekrain = { suites, ... }: { imports = suites.with-bspwm; };
           }; # digga.lib.importers.rakeLeaves ./users/hm;
         };
 
