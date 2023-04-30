@@ -20,15 +20,15 @@
 (defpoll micro :interval "1s"
 	"amixer sget Capture | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
 (defpoll brightness :interval "500ms"
-	"brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
+	"brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")
 (defpoll battery_capacity :interval "1s"
 	"./scripts/getBattery.sh capacity")
 (defpoll battery_icon :interval "1s"
 	"./scripts/getBattery.sh icon")
 (defpoll network_speed_down :interval "50ms"
-"./scripts/getNetworkTraffic.sh wlp3s0 down")
+"./scripts/getNetworkTraffic.sh wlan0 down")
 (defpoll network_speed_up :interval "50ms"
-"./scripts/getNetworkTraffic.sh wlp3s0 up")
+"./scripts/getNetworkTraffic.sh wlan0 up")
 
 ;; MUSIC PLAYER VARS
 (defpoll art :interval "1s"

@@ -22,6 +22,8 @@
       icu
       xdo
       xdotool
+      wirelesstools
+      networkmanagerapplet
       libsForQt5.qt5.qtgraphicaleffects
       x11-emoji-picker
     ];
@@ -125,4 +127,6 @@
   };
 
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
+  programs.nm-applet.enable = true;
 }

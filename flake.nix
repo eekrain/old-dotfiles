@@ -137,7 +137,7 @@
                 hardware.power-management
               ];
               mainWorkstation = base ++ [ virtualbox ];
-              vivobook15 = base ++ [ hardware.monitor ];
+              vivobook15 = base ++ [ hardware.audio hardware.monitor ];
             };
           };
         };
