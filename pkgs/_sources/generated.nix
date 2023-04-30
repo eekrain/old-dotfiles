@@ -19,27 +19,27 @@
   };
   picom-arian8j2-git = {
     pname = "picom-arian8j2-git";
-    version = "ce46b21a39ae79a727768514cb00e632cbfa9483";
+    version = "9645f83b71d5803c7f0a8d724bffb68399809261";
     src = fetchFromGitHub ({
       owner = "Arian8j2";
       repo = "picom";
-      rev = "ce46b21a39ae79a727768514cb00e632cbfa9483";
+      rev = "9645f83b71d5803c7f0a8d724bffb68399809261";
       fetchSubmodules = true;
-      sha256 = "sha256-3tjPGr84SGtM3HD+AttPSC4h6BfDiy1RGoRyigd7Hpw=";
+      sha256 = "sha256-l3q6F3kdwM8bBsiks8nEI2MtLvAdeYDJSslEGFkP2Hk=";
     });
-    date = "2022-09-29";
+    date = "2022-12-22";
   };
   picom-git = {
     pname = "picom-git";
-    version = "8a373c38a631e0344c38d3b19ab673aacfbaf1f5";
+    version = "05ef18d78f96a0a970742f1dff40fcf505a0daa6";
     src = fetchFromGitHub ({
       owner = "yshui";
       repo = "picom";
-      rev = "8a373c38a631e0344c38d3b19ab673aacfbaf1f5";
+      rev = "05ef18d78f96a0a970742f1dff40fcf505a0daa6";
       fetchSubmodules = true;
-      sha256 = "sha256-mKtop5/80YIAZqogshk5Tm9PR+93rLWSh8hqtNFjlPE=";
+      sha256 = "sha256-AvtN1aE9zCsaf2UR4vzPExnJTibYACGDuQcTpOEUkpM=";
     });
-    date = "2022-10-10";
+    date = "2023-04-01";
   };
   picom-jonaburg-git = {
     pname = "picom-jonaburg-git";
@@ -67,26 +67,26 @@
   };
   tokyo-night-gtk-theme = {
     pname = "tokyo-night-gtk-theme";
-    version = "517716f1da4520e9db37c7d86907c54f76dfb936";
+    version = "6e4ee110d8cbcd88b28b451595bf3a5a0ee194e1";
     src = fetchFromGitHub ({
       owner = "Fausto-Korpsvart";
       repo = "Tokyo-Night-GTK-Theme";
-      rev = "517716f1da4520e9db37c7d86907c54f76dfb936";
+      rev = "6e4ee110d8cbcd88b28b451595bf3a5a0ee194e1";
       fetchSubmodules = false;
-      sha256 = "sha256-fGjFKEOL9F1bFWRBKC1tJfDWIucRoU04YNHGuVlcrLQ=";
+      sha256 = "sha256-DjDrcirM7ksb3Yu07wwUZInUr87mGI6nN420kgR+AOE=";
     });
-    date = "2022-10-12";
+    date = "2023-02-20";
   };
   x11-emoji-picker = {
     pname = "x11-emoji-picker";
-    version = "7650a30914fc4fe0ca332d7674f9206bef408e4e";
+    version = "73e34d0d5ba8eda22937206297605abde93ca71b";
     src = fetchFromGitHub ({
       owner = "GaZaTu";
       repo = "x11-emoji-picker";
-      rev = "7650a30914fc4fe0ca332d7674f9206bef408e4e";
+      rev = "73e34d0d5ba8eda22937206297605abde93ca71b";
       fetchSubmodules = false;
-      sha256 = "sha256-GqQvjUegQqqhVx5gujO3eDw8w5ib0hrEI7XbHS8Aa3U=";
+      sha256 = "sha256-6fcSCllVtKN4BUyLesJnZdiHspk9MEWYedoE45KUmnU=";
     });
-    date = "2022-03-10";
+    date = "2023-02-23";
   };
 }

@@ -131,9 +131,10 @@
                 core.nixos
                 users.root
                 users.eekrain
-                graphical.core
-                graphical.driver
-                graphical.bspwm
+                display.core
+                display.bspwm
+                hardware.vga
+                hardware.power-management
               ];
               mainWorkstation = base ++ [ virtualbox ];
             };

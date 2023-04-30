@@ -1,24 +1,19 @@
 { suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
-  imports = suites.mainWorkstation;
+  imports = suites.base;
 
-  # Kernel
   boot = {
+    # Kernel
     initrd = {
-      availableKernelModules = [ "ata_piix" "ohci_pci" "ehci_pci" "sd_mod" "sr_mod" "xhci_pci" "ahci" "usb_storage" ];
-      kernelModules = [ "dm-snapshot" ];
-      luks.devices = {
-        root.device = "/dev/disk/by-uuid/f6458200-a8be-4ec3-87de-f108d37b9750";
-      };
+      availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod" ];
+      kernelModules = [ "dm-snapshot" "amdgpu" ];
     };
-    kernelModules = [ "kvm-intel" ];
+    kernelModules = [ "kvm-amd" ];
     extraModulePackages = [ ];
-  };
-
-  # Bootloader.
-  boot = {
     supportedFilesystems = [ "ntfs" ];
+
+    # Bootloader.
 
     loader = {
       efi = {
@@ -36,79 +31,48 @@
     };
   };
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/root";
-    fsType = "ext4";
-  };
+  fileSystems."/" =
+    {
+      device = "/dev/disk/by-uuid/d25df5b5-ea12-4fd4-ada9-70adfed1cb9f";
+      fsType = "ext4";
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-partlabel/boot";
-    fsType = "vfat";
-  };
+  fileSystems."/boot" =
+    {
+      device = "/dev/disk/by-uuid/FE9B-C952";
+      fsType = "vfat";
+    };
 
-  fileSystems."/nix" = {
-    device = "/dev/disk/by-label/nix-store";
-    fsType = "ext4";
-  };
+  fileSystems."/nix" =
+    {
+      device = "/dev/disk/by-uuid/1b0f5252-b68e-4633-89fc-c6e47ded615b";
+      fsType = "ext4";
+    };
 
-  fileSystems."/home" = {
-    device = "/dev/disk/by-label/home";
-    fsType = "ext4";
-  };
+  fileSystems."/home" =
+    {
+      device = "/dev/disk/by-uuid/24301a58-6e1d-4ed1-8bf4-b4964e6e9da9";
+      fsType = "ext4";
+    };
 
-  fileSystems."/home/eekrain/External" = {
-    device = "/dev/disk/by-label/ntfs";
+  fileSystems."/home/eekrain/Windows" = {
+    device = "/dev/disk/by-uuid/1670BBA270BB8751";
     fsType = "ntfs3";
     options = [ "rw" "uid=1000" ];
   };
 
 
   swapDevices =
-    [{ device = "/dev/disk/by-label/swap"; }];
+    [{ device = "/dev/disk/by-uuid/28fbf037-2ed8-483d-8354-52b2e609a3fd"; }];
 
-  # Networking
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  networking.networkmanager.enable = true;
+  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
-  networking.extraHosts =
-    ''
-      127.0.0.1 local.mydomain.com
-    '';
-
-
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services = {
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-    };
-  };
-  # Bluetooth audio settings for pipewire
-  environment.etc = {
-    "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
-      bluez_monitor.properties = {
-        ["bluez5.enable-sbc-xq"] = true,
-        ["bluez5.enable-msbc"] = true,
-        ["bluez5.enable-hw-volume"] = true,
-        ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
-      }
-    '';
-  };
-
-  # Hardware Spesific
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-  systemd.services.upower.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  # high-resolution display
+  hardware.video.hidpi.enable = lib.mkDefault true;
 }

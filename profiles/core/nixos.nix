@@ -118,10 +118,11 @@
     LC_TIME = "id_ID.utf8";
   };
 
-
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
     xkbVariant = "";
   };
+
+  networking.networkmanager.enable = true;
 }
