@@ -1,7 +1,7 @@
 { suites, config, lib, pkgs, modulesPath, ... }:
 {
   ### root password is empty by default ###
-  imports = suites.base;
+  imports = suites.vivobook15;
 
   boot = {
     # Kernel

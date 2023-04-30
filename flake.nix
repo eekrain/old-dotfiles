@@ -137,6 +137,7 @@
                 hardware.power-management
               ];
               mainWorkstation = base ++ [ virtualbox ];
+              vivobook15 = base ++ [ hardware.monitor ];
             };
           };
         };
@@ -176,12 +177,15 @@
             profiles = digga.lib.rakeLeaves ./users/profiles;
             suites = with profiles; rec {
               base = [ cli ];
-              with-bspwm = [
+              nixos = base ++ [
                 config
-                bspwm
                 programs
-                cli
-                monitor
+              ];
+              with-bspwm-1080 = nixos ++ [
+                bspwm-1080
+              ];
+              with-bspwm-2k = nixos ++ [
+                bspwm-2k
               ];
             };
           };
@@ -202,7 +206,7 @@
             # appropriate. after all, configuring these hm users is one of the
             # first steps in customizing the template.
             darwin = { suites, ... }: { imports = suites.base; };
-            eekrain = { suites, ... }: { imports = suites.with-bspwm; };
+            eekrain = { suites, ... }: { imports = suites.with-bspwm-2k; };
           }; # digga.lib.importers.rakeLeaves ./users/hm;
         };
 
