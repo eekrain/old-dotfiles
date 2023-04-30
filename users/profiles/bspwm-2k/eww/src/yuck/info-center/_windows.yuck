@@ -1,5 +1,5 @@
 (defwindow info-center
-	:geometry (geometry :x "-41%"
+	:geometry (geometry :x "-29%"
 						:y "8%" 
 						:width "32%" 
 						:height "40%"
